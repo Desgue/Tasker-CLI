@@ -1,9 +1,5 @@
 package message
 
-import tea "github.com/charmbracelet/bubbletea"
-
-type ProjectForm struct{}
-
-func ShowProjectForm() tea.Msg {
-	return ProjectForm{}
-}
+type ShowPreviousPage struct{}
+type ShowProjectForm struct{}
+type ShowProjectList struct{}

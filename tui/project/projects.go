@@ -1,8 +1,6 @@
 package project
 
 import (
-	"log"
-
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/charmbracelet/bubbles/list"
@@ -77,8 +75,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "backspace":
 			m.moveToPrevious()
 		case "n":
-			log.Println("N pressed")
-			return m, message.ShowProjectForm
+			return m, m.GoToForm
 		}
 	}
 
@@ -122,6 +119,9 @@ func (m Model) View() string {
 }
 
 // HELPERS
+func (m Model) GoToForm() tea.Msg {
+	return message.ShowProjectForm{}
+}
 func (m *Model) moveToNext() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
 	selectedProject := selectedItem.(*Project)

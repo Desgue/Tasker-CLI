@@ -35,16 +35,19 @@ func (m model) Init() tea.Cmd {
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	var cmd tea.Cmd
 	switch msg.(type) {
-	case message.ProjectForm:
+	case message.ShowProjectForm:
 		m.currentState = projectForm
+		return m, nil
+	case message.ShowPreviousPage:
+		m.currentState--
 		return m, nil
 	}
 	switch m.currentState {
 	case projects:
-		m.models[m.currentState], cmd = m.models[m.currentState].Update(msg)
+		m.models[projects], cmd = m.models[projects].Update(msg)
 		return m, cmd
 	case projectForm:
-		m.models[m.currentState], cmd = m.models[m.currentState].Update(msg)
+		m.models[projectForm], cmd = m.models[projectForm].Update(msg)
 		return m, cmd
 	}
 	return m, nil
