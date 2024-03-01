@@ -4,12 +4,15 @@ import "github.com/charmbracelet/lipgloss"
 
 type Styles struct {
 	BorderColor lipgloss.Color
-	InputField  lipgloss.Style
+	Focused     lipgloss.Style
+	Column      lipgloss.Style
+	Help        lipgloss.Style
 }
 
 func DefaultStyles() *Styles {
 	s := new(Styles)
-	s.BorderColor = lipgloss.Color("36")
-	s.InputField = lipgloss.NewStyle().BorderForeground(s.BorderColor).BorderStyle(lipgloss.NormalBorder()).Padding(1).Width(80)
+	s.Focused = lipgloss.NewStyle().Padding(1, 2).Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#6200EE"))
+	s.Column = lipgloss.NewStyle().Padding(1, 2).Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("0"))
+	s.Help = lipgloss.NewStyle().Foreground(lipgloss.Color("241"))
 	return s
 }

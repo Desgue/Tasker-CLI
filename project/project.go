@@ -10,6 +10,10 @@ const (
 
 type Priority int
 
+func (p Priority) String() string {
+	return [3]string{"Low", "Medium", "High"}[p]
+}
+
 type Project struct {
 	title       string
 	description string
@@ -37,4 +41,20 @@ func (p Project) Description() string {
 }
 func (p Project) FilterValue() string {
 	return p.title
+}
+
+//HELPERS
+func (p *Project) next() {
+	if p.Priority < High {
+		p.Priority++
+	} else {
+		p.Priority = Low
+	}
+}
+func (p *Project) previous() {
+	if p.Priority > Low {
+		p.Priority--
+	} else {
+		p.Priority = High
+	}
 }
