@@ -22,7 +22,7 @@ func New(state State) *model {
 
 	return &model{
 		currentState: state,
-		projectView:  project.New([]project.Project{}),
+		projectView:  project.New(),
 	}
 }
 
