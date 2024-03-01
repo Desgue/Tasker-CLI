@@ -13,6 +13,7 @@ const (
 )
 
 type Project struct {
+	Id          int
 	title       string
 	description string
 	Priority    types.Priority

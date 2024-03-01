@@ -84,6 +84,8 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.moveToPrevious()
 		case "n":
 			return m, m.GoToForm
+		case "t":
+			return m, m.GoToTasks
 		}
 	}
 
@@ -129,6 +131,15 @@ func (m Model) View() string {
 // HELPERS
 func (m Model) CreateProject(p Project) (Project, error) {
 	return p, nil
+}
+
+func (m Model) GoToTasks() tea.Msg {
+	id := m.Lists[m.Focused].SelectedItem().(Project).Id
+	return message.ShowTaskList{
+		ProjectId: id,
+		Width:     m.width,
+		Height:    m.height,
+	}
 }
 
 func (m Model) GoToForm() tea.Msg {
