@@ -1,7 +1,7 @@
 package project
 
 import (
-	"github.com/Desgue/Tasker-Cli/style"
+	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"

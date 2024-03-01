@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/Desgue/Tasker-Cli/project"
+	"github.com/Desgue/Tasker-Cli/tui/project"
 	tea "github.com/charmbracelet/bubbletea"
 )
 
