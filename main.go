@@ -3,27 +3,28 @@ package main
 import (
 	"log"
 
+	"github.com/Desgue/Tasker-Cli/tui/form"
 	"github.com/Desgue/Tasker-Cli/tui/project"
 	tea "github.com/charmbracelet/bubbletea"
 )
 
 const (
-	projectView State = iota
+	projects State = iota
+	projectForm
 )
 
 type State int
 
 type model struct {
 	currentState State
-	projectView  *project.Model
+	models       []tea.Model
 }
 
 func New(state State) *model {
-
-	return &model{
-		currentState: state,
-		projectView:  project.New(),
-	}
+	model := &model{}
+	model.currentState = state
+	model.models = []tea.Model{project.New(), form.NewProjectForm()}
+	return model
 }
 
 func (m model) Init() tea.Cmd {
@@ -32,22 +33,18 @@ func (m model) Init() tea.Cmd {
 
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch m.currentState {
-	case projectView:
-		return m.projectView.Update(msg)
+	case projects:
+		return m.models[m.currentState].Update(msg)
 	}
 	return m, nil
 }
 
 func (m model) View() string {
-	switch m.currentState {
-	case projectView:
-		return m.projectView.View()
-	}
-	return "Main model view"
+	return m.models[m.currentState].View()
 }
 
 func main() {
-	m := New(projectView)
+	m := New(projects)
 
 	f, err := tea.LogToFile("debug.log", "debug")
 	if err != nil {
