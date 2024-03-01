@@ -3,6 +3,7 @@ package project
 import (
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
+	"github.com/Desgue/Tasker-Cli/types"
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -13,9 +14,11 @@ const divisor int = 4
 type Model struct {
 	Lists   []list.Model
 	Err     error
-	Focused Priority
+	Focused types.Priority
 	loaded  bool
 	styles  *style.Styles
+	width   int
+	height  int
 }
 
 func New() *Model {
@@ -62,8 +65,13 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		m.styles.Column.Width(msg.Width / divisor)
 		m.styles.Focused.Width(msg.Width / divisor)
+		m.width = msg.Width
+		m.height = msg.Height
 		m.InitLists(msg.Width, msg.Height)
 		m.loaded = true
+	case Project:
+		m.Lists[msg.Priority].InsertItem(0, msg)
+		return m, nil
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "l", "right":
@@ -91,26 +99,26 @@ func (m Model) View() string {
 		highView := m.Lists[High].View()
 		switch m.Focused {
 		default:
-			return lipgloss.JoinHorizontal(
+			return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, lipgloss.JoinHorizontal(
 				lipgloss.Left,
 				m.styles.Focused.Render(lowView),
 				m.styles.Column.Render(mediumView),
 				m.styles.Column.Render(highView),
-			)
+			))
 		case Medium:
-			return lipgloss.JoinHorizontal(
+			return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, lipgloss.JoinHorizontal(
 				lipgloss.Left,
 				m.styles.Column.Render(lowView),
 				m.styles.Focused.Render(mediumView),
 				m.styles.Column.Render(highView),
-			)
+			))
 		case High:
-			return lipgloss.JoinHorizontal(
+			return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, lipgloss.JoinHorizontal(
 				lipgloss.Left,
 				m.styles.Column.Render(lowView),
 				m.styles.Column.Render(mediumView),
 				m.styles.Focused.Render(highView),
-			)
+			))
 		}
 
 	}
@@ -119,12 +127,21 @@ func (m Model) View() string {
 }
 
 // HELPERS
+func (m Model) CreateProject(p Project) (Project, error) {
+	return p, nil
+}
+
 func (m Model) GoToForm() tea.Msg {
-	return message.ShowProjectForm{}
+	msg := message.ShowProjectForm{
+		Focused: m.Focused,
+		Width:   m.width,
+		Height:  m.height,
+	}
+	return msg
 }
 func (m *Model) moveToNext() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
-	selectedProject := selectedItem.(*Project)
+	selectedProject := selectedItem.(Project)
 	m.Lists[selectedProject.Priority].RemoveItem(m.Lists[m.Focused].Index())
 	selectedProject.next()
 	m.Lists[selectedProject.Priority].InsertItem(0, selectedProject)
@@ -133,7 +150,7 @@ func (m *Model) moveToNext() /* tea.Msg */ {
 
 func (m *Model) moveToPrevious() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
-	selectedProject := selectedItem.(*Project)
+	selectedProject := selectedItem.(Project)
 	m.Lists[selectedProject.Priority].RemoveItem(m.Lists[m.Focused].Index())
 	selectedProject.previous()
 	m.Lists[selectedProject.Priority].InsertItem(0, selectedProject)

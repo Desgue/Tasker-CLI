@@ -20,3 +20,151 @@ debug 2024/03/01 17:09:11 N pressed
 debug 2024/03/01 17:14:34 N pressed
 debug 2024/03/01 17:14:52 N pressed
 debug 2024/03/01 17:16:16 N pressed
+debug 2024/03/01 20:41:36 Low
+debug 2024/03/01 20:57:30 High
+debug 2024/03/01 20:59:26 High
+debug 2024/03/01 20:59:37 High
+debug 2024/03/01 21:00:16 Low
+debug 2024/03/01 21:00:44 Low
+debug 2024/03/01 21:00:44 Low
+debug 2024/03/01 21:01:09 Low
+debug 2024/03/01 21:01:21 Low
+debug 2024/03/01 21:02:00 Low
+debug 2024/03/01 21:02:10 Medium
+debug 2024/03/01 21:02:35 Low
+debug 2024/03/01 21:03:27 Low
+debug 2024/03/01 21:04:48 Low
+debug 2024/03/01 21:04:54 Low
+debug 2024/03/01 21:05:26 Low
+debug 2024/03/01 21:05:49 Low
+debug 2024/03/01 21:05:51 Project &{  Low 2024-03-01 21:05:51.0682163 +0000 GMT m=+2.540342601 2024-03-01 21:05:51.0682163 +0000 GMT m=+2.540342601}
+debug 2024/03/01 21:05:56 Medium
+debug 2024/03/01 21:06:00 High
+debug 2024/03/01 21:06:02 Project &{  High 2024-03-01 21:06:02.7270382 +0000 GMT m=+14.199164501 2024-03-01 21:06:02.7270382 +0000 GMT m=+14.199164501}
+debug 2024/03/01 21:06:08 Medium
+debug 2024/03/01 21:06:11 Project &{  Medium 2024-03-01 21:06:11.1245335 +0000 GMT m=+22.596659801 2024-03-01 21:06:11.1245335 +0000 GMT m=+22.596659801}
+debug 2024/03/01 21:08:59 Low
+debug 2024/03/01 21:09:01 {<nil> >  Add a title for the project 0 42 {530ms    0 true false 0xc0000081b0 10 0} 0s   [38;5;240m[0m [38;5;240m[0m  0 0 {{[right ctrl+f] { } false} {[left ctrl+b] { } false} {[alt+right alt+f] { } false} {[alt+left alt+b] { } false} {[alt+backspace ctrl+w] { } false} {[alt+delete alt+d] { } false} {[ctrl+k] { } false} {[ctrl+u] { } false} {[backspace ctrl+h] { } false} {[delete ctrl+d] { } false} {[home ctrl+a] { } false} {[end ctrl+e] { } false} {[ctrl+v] { } false} {[tab] { } false} {[down ctrl+n] { } false} {[up ctrl+p] { } false}} [] true 0 0 0 <nil> 0xc0000fe000 false [] [] 0} {<nil> 0xc00001cae0 ┃  Add a description for the project true 126 {{[left ctrl+b] { } false} {[right ctrl+f] { } false} {[ctrl+k] { } false} {[ctrl+u] { } false} {[backspace ctrl+h] { } false} {[delete ctrl+d] { } false} {[alt+backspace ctrl+w] { } false} {[alt+delete alt+d] { } false} {[enter ctrl+m] { } false} {[end ctrl+e] { } false} {[down ctrl+n] { } false} {[up ctrl+p] { } false} {[home ctrl+a] { } false} {[ctrl+v] { } false} {[alt+left alt+b] { } false} {[alt+right alt+f] { } false} {[alt+< ctrl+home] { } false} {[alt+> ctrl+end] { } false} {[alt+u] { } false} {[alt+l] { } false} {[alt+c] { } false} {[ctrl+t] { } false}} { [40m[0m  [30m[0m [37m[0m [38;5;240m[0m [37m[0m } { [37m[0m [37m[0m [30m[0m [37m[0m [38;5;240m[0m [37m[0m [37m[0m} 0xc00026acd0 {530ms    0 false true 0xc0000081c8 10 0} 400 99 500 <nil> 2 34 6 [[]] false 0 0 0 %3v  0xc000264200 0xc000324d80} Low
+debug 2024/03/01 21:09:01 Project &{  Low 2024-03-01 21:09:01.23443 +0000 GMT m=+2.607110101 2024-03-01 21:09:01.23443 +0000 GMT m=+2.607110101}
+debug 2024/03/01 21:09:36 Low
+debug 2024/03/01 21:09:38 {<nil> >  Add a title for the project 0 42 {530ms    0 true false 0xc0000081b0 5 0} 0s   [38;5;240m[0m [38;5;240m[0m  0 0 {{[right ctrl+f] { } false} {[left ctrl+b] { } false} {[alt+right alt+f] { } false} {[alt+left alt+b] { } false} {[alt+backspace ctrl+w] { } false} {[alt+delete alt+d] { } false} {[ctrl+k] { } false} {[ctrl+u] { } false} {[backspace ctrl+h] { } false} {[delete ctrl+d] { } false} {[home ctrl+a] { } false} {[end ctrl+e] { } false} {[ctrl+v] { } false} {[tab] { } false} {[down ctrl+n] { } false} {[up ctrl+p] { } false}} [] true 0 0 0 <nil> 0xc0002c6960 false [] [] 0} {<nil> 0xc00001cae0 ┃  Add a description for the project true 126 {{[left ctrl+b] { } false} {[right ctrl+f] { } false} {[ctrl+k] { } false} {[ctrl+u] { } false} {[backspace ctrl+h] { } false} {[delete ctrl+d] { } false} {[alt+backspace ctrl+w] { } false} {[alt+delete alt+d] { } false} {[enter ctrl+m] { } false} {[end ctrl+e] { } false} {[down ctrl+n] { } false} {[up ctrl+p] { } false} {[home ctrl+a] { } false} {[ctrl+v] { } false} {[alt+left alt+b] { } false} {[alt+right alt+f] { } false} {[alt+< ctrl+home] { } false} {[alt+> ctrl+end] { } false} {[alt+u] { } false} {[alt+l] { } false} {[alt+c] { } false} {[ctrl+t] { } false}} { [40m[0m  [30m[0m [37m[0m [38;5;240m[0m [37m[0m } { [37m[0m [37m[0m [30m[0m [37m[0m [38;5;240m[0m [37m[0m [37m[0m} 0xc0004dccd0 {530ms    0 false true 0xc0000081c8 7 0} 400 99 500 <nil> 2 34 6 [[]] false 0 0 0 %3v  0xc00019e200 0xc00050c000}
+debug 2024/03/01 21:09:38 Project &{  Low 2024-03-01 21:09:38.03783 +0000 GMT m=+1.636239801 2024-03-01 21:09:38.03783 +0000 GMT m=+1.636239801}
+debug 2024/03/01 21:10:11 Low
+debug 2024/03/01 21:10:13  
+debug 2024/03/01 21:10:13 Project &{  Low 2024-03-01 21:10:13.2505545 +0000 GMT m=+2.281538301 2024-03-01 21:10:13.2505545 +0000 GMT m=+2.281538301}
+debug 2024/03/01 21:12:40 Low
+debug 2024/03/01 21:12:42  
+debug 2024/03/01 21:12:42 Project {  Low 2024-03-01 21:12:42.3954162 +0000 GMT m=+1.778551501 2024-03-01 21:12:42.3954162 +0000 GMT m=+1.778551501}
+debug 2024/03/01 21:13:23 Medium
+debug 2024/03/01 21:13:25  
+debug 2024/03/01 21:13:25 Project {  Medium 2024-03-01 21:13:25.1057705 +0000 GMT m=+4.766343201 2024-03-01 21:13:25.1057705 +0000 GMT m=+4.766343201}
+debug 2024/03/01 21:15:22 Low
+debug 2024/03/01 21:15:23 before call command:   
+debug 2024/03/01 21:15:23  
+debug 2024/03/01 21:15:23 Project {  Low 2024-03-01 21:15:23.6019168 +0000 GMT m=+2.054350801 2024-03-01 21:15:23.6019168 +0000 GMT m=+2.054350801}
+debug 2024/03/01 21:16:51 Low
+debug 2024/03/01 21:16:52 before call command:  knmaskn knknsa
+debug 2024/03/01 21:16:52 knmaskn knknsa
+debug 2024/03/01 21:16:52 Project {knmaskn knknsa Low 2024-03-01 21:16:52.4478532 +0000 GMT m=+2.376324201 2024-03-01 21:16:52.4478532 +0000 GMT m=+2.376324201}
+debug 2024/03/01 21:16:53 Low
+debug 2024/03/01 21:17:12 Low
+debug 2024/03/01 21:17:14 Low
+debug 2024/03/01 21:17:15 before call command:  askmaskn mkasnkasn
+debug 2024/03/01 21:17:15 askmaskn mkasnkasn
+debug 2024/03/01 21:17:15 Project {askmaskn mkasnkasn Low 2024-03-01 21:17:15.8557148 +0000 GMT m=+3.614996701 2024-03-01 21:17:15.8557148 +0000 GMT m=+3.614996701}
+debug 2024/03/01 21:17:16 Low
+debug 2024/03/01 21:20:30 Medium
+debug 2024/03/01 21:20:34 eduardoi huwgu
+debug 2024/03/01 21:20:34 Project {eduardoi huwgu Medium 2024-03-01 21:20:34.1315911 +0000 GMT m=+5.617417001 2024-03-01 21:20:34.1315911 +0000 GMT m=+5.617417001}
+debug 2024/03/01 21:20:47 Low
+debug 2024/03/01 21:20:48 naskn n akjsna
+debug 2024/03/01 21:20:48 Project {naskn n akjsna Low 2024-03-01 21:20:48.8333052 +0000 GMT m=+1.785756701 2024-03-01 21:20:48.8333052 +0000 GMT m=+1.785756701}
+debug 2024/03/01 21:20:49 Low
+debug 2024/03/01 21:21:01 Low
+debug 2024/03/01 21:21:23 Low
+debug 2024/03/01 21:21:24 naknkasn naksnaks
+debug 2024/03/01 21:21:24 Project {naknkasn naksnaks Low 2024-03-01 21:21:24.9478896 +0000 GMT m=+2.064453901 2024-03-01 21:21:24.9478896 +0000 GMT m=+2.064453901}
+debug 2024/03/01 21:21:25 Low
+debug 2024/03/01 21:21:27 aksnaksnsan nakasnasn
+debug 2024/03/01 21:21:27 Project {aksnaksnsan nakasnasn Low 2024-03-01 21:21:27.6973599 +0000 GMT m=+4.813924201 2024-03-01 21:21:27.6973599 +0000 GMT m=+4.813924201}
+debug 2024/03/01 21:21:51 Low
+debug 2024/03/01 21:21:53 Low
+debug 2024/03/01 21:26:47 High
+debug 2024/03/01 21:26:50 knsaksank kanskansk
+debug 2024/03/01 21:26:50 Project {knsaksank kanskansk High 2024-03-01 21:26:50.0779028 +0000 GMT m=+299.434730301 2024-03-01 21:26:50.0779028 +0000 GMT m=+299.434730301}
+debug 2024/03/01 21:27:37 Low
+debug 2024/03/01 21:27:54 Low
+debug 2024/03/01 21:28:56 Low
+debug 2024/03/01 21:29:09 Low
+debug 2024/03/01 21:29:16 Low
+debug 2024/03/01 21:29:26 Low
+debug 2024/03/01 21:29:33 Low
+debug 2024/03/01 21:29:43 Low
+debug 2024/03/01 21:29:54 Low
+debug 2024/03/01 21:31:27 Low
+debug 2024/03/01 21:32:18 Low
+debug 2024/03/01 21:32:34 Low
+debug 2024/03/01 21:32:49 Low
+debug 2024/03/01 21:33:12 Low
+debug 2024/03/01 21:33:28 Low
+debug 2024/03/01 21:33:39 Low
+debug 2024/03/01 21:33:46 Low
+debug 2024/03/01 21:33:56 Low
+debug 2024/03/01 21:34:12 Low
+debug 2024/03/01 21:34:24 Low
+debug 2024/03/01 21:34:37 Low
+debug 2024/03/01 21:34:55 Low
+debug 2024/03/01 21:35:11 Low
+debug 2024/03/01 21:35:19 Low
+debug 2024/03/01 21:35:32 Low
+debug 2024/03/01 21:35:56 Low
+debug 2024/03/01 21:36:56 Low
+debug 2024/03/01 21:37:34 Low
+debug 2024/03/01 21:37:49 Low
+debug 2024/03/01 21:37:57 Low
+debug 2024/03/01 21:38:11 Low
+debug 2024/03/01 21:38:22 Low
+debug 2024/03/01 21:38:35 Low
+debug 2024/03/01 21:38:43 Low
+debug 2024/03/01 21:38:50 Low
+debug 2024/03/01 21:39:00 Low
+debug 2024/03/01 21:39:08 Low
+debug 2024/03/01 21:39:16 Low
+debug 2024/03/01 21:39:24 Low
+debug 2024/03/01 21:39:35 Low
+debug 2024/03/01 21:39:42 Low
+debug 2024/03/01 21:41:30 Low
+debug 2024/03/01 21:42:11 Low
+debug 2024/03/01 21:43:58 Low
+debug 2024/03/01 21:44:20 Low
+debug 2024/03/01 21:44:22 Low
+debug 2024/03/01 21:44:26 Low
+debug 2024/03/01 21:44:33 Low
+debug 2024/03/01 21:44:36 Low
+debug 2024/03/01 21:44:45 Low
+debug 2024/03/01 21:46:00 Low
+debug 2024/03/01 21:46:00 209
+debug 2024/03/01 21:46:07 209
+debug 2024/03/01 21:46:39 Low
+debug 2024/03/01 21:47:21 Low
+debug 2024/03/01 21:47:40 Low
+debug 2024/03/01 21:47:55 Low
+debug 2024/03/01 21:48:06 Low
+debug 2024/03/01 21:48:18 Low
+debug 2024/03/01 21:48:27 Low
+debug 2024/03/01 21:48:41 Low
+debug 2024/03/01 21:48:59 Low
+debug 2024/03/01 21:49:13 Low
+debug 2024/03/01 21:49:26 Low
+debug 2024/03/01 21:49:34 Low
+debug 2024/03/01 21:49:45 Low
+debug 2024/03/01 21:50:01 Low
+debug 2024/03/01 21:50:21 Low
+debug 2024/03/01 21:50:43 Low
+debug 2024/03/01 21:50:52 Low
+debug 2024/03/01 21:51:05 Low
+debug 2024/03/01 21:51:19 Low
+debug 2024/03/01 21:51:32 Low
+debug 2024/03/01 21:51:43 Low
+debug 2024/03/01 21:52:22 High
+debug 2024/03/01 21:55:09 Low

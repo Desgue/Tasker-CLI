@@ -37,10 +37,15 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg.(type) {
 	case message.ShowProjectForm:
 		m.currentState = projectForm
+		m.models[projectForm], cmd = form.NewProjectForm().Update(msg)
+		return m, cmd
+	case message.ShowProjectList:
+		m.currentState = projects
 		return m, nil
-	case message.ShowPreviousPage:
-		m.currentState--
-		return m, nil
+	case project.Project:
+		m.currentState = projects
+		m.models[projects], cmd = m.models[projects].Update(msg)
+		return m, cmd
 	}
 	switch m.currentState {
 	case projects:

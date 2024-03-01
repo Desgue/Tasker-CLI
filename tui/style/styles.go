@@ -16,3 +16,15 @@ func DefaultStyles() *Styles {
 	s.Help = lipgloss.NewStyle().Foreground(lipgloss.Color("241"))
 	return s
 }
+
+type FormStyle struct {
+	TextInput lipgloss.Style
+	TextArea  lipgloss.Style
+}
+
+func DefaultFormStyle() *FormStyle {
+	s := new(FormStyle)
+	s.TextInput = lipgloss.NewStyle().Padding(1, 2).Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#6200EE"))
+	s.TextArea = lipgloss.NewStyle().Padding(1, 2).Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#6200EE"))
+	return s
+}

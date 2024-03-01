@@ -1,29 +1,27 @@
 package project
 
-import "time"
+import (
+	"time"
+
+	"github.com/Desgue/Tasker-Cli/types"
+)
 
 const (
-	Low Priority = iota
+	Low types.Priority = iota
 	Medium
 	High
 )
 
-type Priority int
-
-func (p Priority) String() string {
-	return [3]string{"Low", "Medium", "High"}[p]
-}
-
 type Project struct {
 	title       string
 	description string
-	Priority    Priority
+	Priority    types.Priority
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 }
 
-func NewProject(title, description string, Priority Priority) *Project {
-	return &Project{
+func NewProject(title, description string, Priority types.Priority) Project {
+	return Project{
 		title:       title,
 		description: description,
 		Priority:    Priority,
@@ -32,7 +30,7 @@ func NewProject(title, description string, Priority Priority) *Project {
 	}
 }
 
-//Implement list.Item interface
+// Implement list.Item interface
 func (p Project) Title() string {
 	return p.title
 }
@@ -43,7 +41,7 @@ func (p Project) FilterValue() string {
 	return p.title
 }
 
-//HELPERS
+// HELPERS
 func (p *Project) next() {
 	if p.Priority < High {
 		p.Priority++
