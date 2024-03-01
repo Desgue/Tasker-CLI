@@ -1,6 +1,9 @@
 package project
 
 import (
+	"log"
+
+	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
@@ -73,6 +76,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.moveToNext()
 		case "backspace":
 			m.moveToPrevious()
+		case "n":
+			log.Println("N pressed")
+			return m, message.ShowProjectForm
 		}
 	}
 

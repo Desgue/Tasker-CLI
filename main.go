@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/Desgue/Tasker-Cli/tui/form"
+	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/project"
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -32,9 +33,19 @@ func (m model) Init() tea.Cmd {
 }
 
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	var cmd tea.Cmd
+	switch msg.(type) {
+	case message.ProjectForm:
+		m.currentState = projectForm
+		return m, nil
+	}
 	switch m.currentState {
 	case projects:
-		return m.models[m.currentState].Update(msg)
+		m.models[m.currentState], cmd = m.models[m.currentState].Update(msg)
+		return m, cmd
+	case projectForm:
+		m.models[m.currentState], cmd = m.models[m.currentState].Update(msg)
+		return m, cmd
 	}
 	return m, nil
 }

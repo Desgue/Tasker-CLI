@@ -4,6 +4,7 @@ import (
 	"github.com/charmbracelet/bubbles/textarea"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
 )
 
 // Project is a form for creating a new project
@@ -28,9 +29,16 @@ func (m Project) Init() tea.Cmd {
 }
 
 func (m Project) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
+	case tea.KeyMsg:
+		switch msg.String() {
+		case "ctrl+c":
+			return m, tea.Quit
+		}
+	}
 	return m, nil
 }
 
 func (m Project) View() string {
-	return "Project form"
+	return lipgloss.JoinVertical(lipgloss.Center, m.title.View(), m.description.View())
 }
