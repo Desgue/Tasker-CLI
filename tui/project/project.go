@@ -1,12 +1,6 @@
 package project
 
-import (
-	"time"
-
-	"github.com/Desgue/Tasker-Cli/types"
-)
-
-const (
+/* const (
 	Low types.Priority = iota
 	Medium
 	High
@@ -57,3 +51,4 @@ func (p *Project) previous() {
 		p.Priority = High
 	}
 }
+*/

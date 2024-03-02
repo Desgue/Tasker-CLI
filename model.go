@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/Desgue/Tasker-Cli/domain"
 	"github.com/Desgue/Tasker-Cli/repo/db"
 	"github.com/Desgue/Tasker-Cli/tui/form"
 	"github.com/Desgue/Tasker-Cli/tui/message"
@@ -49,7 +50,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.currentState = tasks
 		m.models[tasks], cmd = m.models[tasks].Update(msg)
 		return m, cmd
-	case project.Project:
+	case domain.ProjectItem:
 		m.currentState = projects
 		m.models[projects], cmd = m.models[projects].Update(msg)
 		return m, cmd

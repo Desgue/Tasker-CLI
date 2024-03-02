@@ -1,6 +1,7 @@
 package project
 
 import (
+	"github.com/Desgue/Tasker-Cli/domain"
 	"github.com/Desgue/Tasker-Cli/repo/db"
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
@@ -24,7 +25,7 @@ type Model struct {
 }
 
 func New(repo *db.SqliteDB) *Model {
-	m := &Model{styles: style.DefaultStyles(), repo: repo, Focused: Low}
+	m := &Model{styles: style.DefaultStyles(), repo: repo, Focused: domain.Low}
 	return m
 }
 
@@ -34,26 +35,26 @@ func (m *Model) InitLists(w, h int) {
 	defaultList.SetShowHelp(false)
 	m.Lists = []list.Model{defaultList, defaultList, defaultList}
 
-	// Init Low Priority
-	m.Lists[Low].Title = "Low Priority"
-	m.Lists[Low].SetItems([]list.Item{
-		NewProject("Project 1", "Low Priority Project 1 ", Low),
-		NewProject("Project 2", "Low Priority Project 2", Low),
-		NewProject("Project 3", "Low Priority Project 3", Low),
+	// Init domain.Low Priority
+	m.Lists[domain.Low].Title = "domain.Low Priority"
+	m.Lists[domain.Low].SetItems([]list.Item{
+		domain.NewProject("Project 1", "domain.Low Priority Project 1 ", domain.Low),
+		domain.NewProject("Project 2", "domain.Low Priority Project 2", domain.Low),
+		domain.NewProject("Project 3", "domain.Low Priority Project 3", domain.Low),
 	})
 
-	// Init Medium Priority
-	m.Lists[Medium].Title = "Medium Priority"
-	m.Lists[Medium].SetItems([]list.Item{
-		NewProject("Project 4", "Medium Priority Project 1", Medium),
-		NewProject("Project 5", "Medium Priority Project 2", Medium),
-		NewProject("Project 6", "Medium Priority Project 3", Medium),
+	// Init domain.Medium Priority
+	m.Lists[domain.Medium].Title = "domain.Medium Priority"
+	m.Lists[domain.Medium].SetItems([]list.Item{
+		domain.NewProject("Project 4", "domain.Medium Priority Project 1", domain.Medium),
+		domain.NewProject("Project 5", "domain.Medium Priority Project 2", domain.Medium),
+		domain.NewProject("Project 6", "domain.Medium Priority Project 3", domain.Medium),
 	})
 
-	// Init High Priority
-	m.Lists[High].Title = "High Priority"
-	m.Lists[High].SetItems([]list.Item{
-		NewProject("Project 7", "High Priority Project 1", High),
+	// Init domain.High Priority
+	m.Lists[domain.High].Title = "domain.High Priority"
+	m.Lists[domain.High].SetItems([]list.Item{
+		domain.NewProject("Project 7", "domain.High Priority Project 1", domain.High),
 	})
 
 }
@@ -71,7 +72,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.height = msg.Height
 		m.InitLists(msg.Width, msg.Height)
 		m.loaded = true
-	case Project:
+	case domain.ProjectItem:
 		m.Lists[msg.Priority].InsertItem(0, msg)
 		return m, nil
 	case tea.KeyMsg:
@@ -98,9 +99,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 func (m Model) View() string {
 	if m.loaded {
-		lowView := m.Lists[Low].View()
-		mediumView := m.Lists[Medium].View()
-		highView := m.Lists[High].View()
+		lowView := m.Lists[domain.Low].View()
+		mediumView := m.Lists[domain.Medium].View()
+		highView := m.Lists[domain.High].View()
 		switch m.Focused {
 		default:
 			return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, lipgloss.JoinHorizontal(
@@ -109,14 +110,14 @@ func (m Model) View() string {
 				m.styles.Column.Render(mediumView),
 				m.styles.Column.Render(highView),
 			))
-		case Medium:
+		case domain.Medium:
 			return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, lipgloss.JoinHorizontal(
 				lipgloss.Left,
 				m.styles.Column.Render(lowView),
 				m.styles.Focused.Render(mediumView),
 				m.styles.Column.Render(highView),
 			))
-		case High:
+		case domain.High:
 			return lipgloss.Place(m.width, m.height, lipgloss.Center, lipgloss.Center, lipgloss.JoinHorizontal(
 				lipgloss.Left,
 				m.styles.Column.Render(lowView),
@@ -131,12 +132,12 @@ func (m Model) View() string {
 }
 
 // HELPERS
-func (m Model) CreateProject(p Project) (Project, error) {
+func (m Model) CreateProject(p domain.ProjectItem) (domain.ProjectItem, error) {
 	return p, nil
 }
 
 func (m Model) GoToTasks() tea.Msg {
-	id := m.Lists[m.Focused].SelectedItem().(Project).Id
+	id := m.Lists[m.Focused].SelectedItem().(domain.ProjectItem).Id
 	return message.ShowTaskList{
 		ProjectId: id,
 		Width:     m.width,
@@ -154,33 +155,33 @@ func (m Model) GoToForm() tea.Msg {
 }
 func (m *Model) moveToNext() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
-	selectedProject := selectedItem.(Project)
+	selectedProject := selectedItem.(domain.ProjectItem)
 	m.Lists[selectedProject.Priority].RemoveItem(m.Lists[m.Focused].Index())
-	selectedProject.next()
+	selectedProject.Next()
 	m.Lists[selectedProject.Priority].InsertItem(0, selectedProject)
 
 }
 
 func (m *Model) moveToPrevious() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
-	selectedProject := selectedItem.(Project)
+	selectedProject := selectedItem.(domain.ProjectItem)
 	m.Lists[selectedProject.Priority].RemoveItem(m.Lists[m.Focused].Index())
-	selectedProject.previous()
+	selectedProject.Previous()
 	m.Lists[selectedProject.Priority].InsertItem(0, selectedProject)
 
 }
 
 func (m *Model) next() {
-	if m.Focused < High {
+	if m.Focused < domain.High {
 		m.Focused++
 	} else {
-		m.Focused = Low
+		m.Focused = domain.Low
 	}
 }
 func (m *Model) previous() {
-	if m.Focused > Low {
+	if m.Focused > domain.Low {
 		m.Focused--
 	} else {
-		m.Focused = High
+		m.Focused = domain.High
 	}
 }

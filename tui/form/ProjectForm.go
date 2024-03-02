@@ -3,9 +3,9 @@ package form
 import (
 	"log"
 
+	"github.com/Desgue/Tasker-Cli/domain"
 	"github.com/Desgue/Tasker-Cli/repo/db"
 	"github.com/Desgue/Tasker-Cli/tui/message"
-	"github.com/Desgue/Tasker-Cli/tui/project"
 	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/Desgue/Tasker-Cli/types"
 	"github.com/charmbracelet/bubbles/textarea"
@@ -119,7 +119,7 @@ func (m ProjectForm) GoToProjectList() tea.Msg {
 
 }
 func (m ProjectForm) CreateProject() tea.Msg {
-	p := project.NewProject(m.title.Value(), m.description.Value(), m.focused)
+	p := domain.NewProject(m.title.Value(), m.description.Value(), m.focused)
 	return p
 
 }
