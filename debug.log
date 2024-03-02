@@ -297,3 +297,83 @@ debug 2024/03/02 15:07:07 Table Projects exists
 debug 2024/03/02 15:07:07 Table Tasks exists
 debug 2024/03/02 15:12:56 Low
 debug 2024/03/02 16:18:46 Low
+debug 2024/03/02 17:02:58 Low
+debug 2024/03/02 17:15:18 Low
+debug 2024/03/02 17:15:24 SQL logic error: table Projects has no column named updatedAt (1)
+debug 2024/03/02 17:15:25 SQL logic error: table Projects has no column named updatedAt (1)
+debug 2024/03/02 17:15:25 SQL logic error: table Projects has no column named updatedAt (1)
+debug 2024/03/02 17:16:48 Medium
+debug 2024/03/02 17:17:03 High
+debug 2024/03/02 17:17:49 Low
+debug 2024/03/02 17:18:50 Low
+debug 2024/03/02 17:18:53 Hello from service addproject
+debug 2024/03/02 17:18:53 Hello from repo createproject
+debug 2024/03/02 17:18:53 Hello from service getprojects
+debug 2024/03/02 17:18:53 Hello from repo getprojects
+debug 2024/03/02 17:19:38 Low
+debug 2024/03/02 17:19:39 Hello from service addproject
+debug 2024/03/02 17:19:39 Hello from repo createproject
+debug 2024/03/02 17:19:39 Hello from service getprojects
+debug 2024/03/02 17:19:39 Hello from repo getprojects
+debug 2024/03/02 17:19:42 Low
+debug 2024/03/02 17:19:45 Medium
+debug 2024/03/02 17:19:46 Hello from service addproject
+debug 2024/03/02 17:19:46 Hello from repo createproject
+debug 2024/03/02 17:19:46 Hello from service getprojects
+debug 2024/03/02 17:19:46 Hello from repo getprojects
+debug 2024/03/02 17:20:12 Low
+debug 2024/03/02 17:20:13 Hello from service addproject
+debug 2024/03/02 17:20:13 Hello from repo createproject
+debug 2024/03/02 17:20:13 Hello from service getprojects
+debug 2024/03/02 17:20:13 Hello from repo getprojects
+debug 2024/03/02 17:23:06 Low
+debug 2024/03/02 17:23:07 Hello from service addproject
+debug 2024/03/02 17:23:07 Hello from repo createproject
+debug 2024/03/02 17:23:07 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:23:07 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:23:08 Hello from service addproject
+debug 2024/03/02 17:23:08 Hello from repo createproject
+debug 2024/03/02 17:23:08 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:23:08 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:23:08 Hello from service addproject
+debug 2024/03/02 17:23:08 Hello from repo createproject
+debug 2024/03/02 17:23:08 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:23:08 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:28 Low
+debug 2024/03/02 17:29:30 Hello from service addproject
+debug 2024/03/02 17:29:30 Hello from repo createproject
+debug 2024/03/02 17:29:30 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:30 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 Hello from service addproject
+debug 2024/03/02 17:29:43 Hello from repo createproject
+debug 2024/03/02 17:29:43 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 Hello from service addproject
+debug 2024/03/02 17:29:43 Hello from repo createproject
+debug 2024/03/02 17:29:43 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 Hello from service addproject
+debug 2024/03/02 17:29:43 Hello from repo createproject
+debug 2024/03/02 17:29:43 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 Hello from service addproject
+debug 2024/03/02 17:29:43 Hello from repo createproject
+debug 2024/03/02 17:29:43 Error getting last created project sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:29:43 sql: Scan error on column index 4, name "createdAt": unsupported Scan, storing driver.Value type string into type *time.Time
+debug 2024/03/02 17:32:43 Low
+debug 2024/03/02 17:32:44 Hello from service addproject
+debug 2024/03/02 17:32:44 Hello from repo createproject
+debug 2024/03/02 17:32:44 Error from repo createproject SQL logic error: 4 values for 3 columns (1)
+debug 2024/03/02 17:32:44 SQL logic error: 4 values for 3 columns (1)
+debug 2024/03/02 17:34:02 Low
+debug 2024/03/02 17:34:04 Hello from service addproject
+debug 2024/03/02 17:34:04 Hello from repo createproject
+debug 2024/03/02 17:34:04 Project created with id: 1
+debug 2024/03/02 17:34:04 Hello from service getprojects
+debug 2024/03/02 17:34:04 Hello from repo getprojects
+debug 2024/03/02 17:34:11 Low
+debug 2024/03/02 17:34:12 Hello from service addproject
+debug 2024/03/02 17:34:12 Hello from repo createproject
+debug 2024/03/02 17:34:12 Project created with id: 2
+debug 2024/03/02 17:34:12 Hello from service getprojects
+debug 2024/03/02 17:34:12 Hello from repo getprojects

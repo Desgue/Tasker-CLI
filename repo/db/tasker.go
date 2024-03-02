@@ -14,9 +14,7 @@ const (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	title text NOT NULL,
 	description text,
-	priority text CHECK( priority IN ('Low', 'Medium', 'High') ) DEFAULT 'Low',
-	createdAt TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	updateAt TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+	priority text CHECK( priority IN ('Low', 'Medium', 'High') ) NOT NULL DEFAULT 'Low'
 );`
 	createTaskTableQuery = `
 	CREATE TABLE IF NOT EXISTS Tasks (
@@ -24,14 +22,12 @@ const (
 	projectId INTEGER NOT NULL REFERENCES Projects(id),
 	title text NOT NULL,
 	description text,
-	status text CHECK ( status IN ('Pending', 'InProgress', 'Done')) DEFAULT 'Pending',
-	createdAt TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	updateAt TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+	status text CHECK ( status IN ('Pending', 'InProgress', 'Done')) DEFAULT 'Pending'
 );`
 )
 
 type SqliteDB struct {
-	db      *sql.DB
+	DB      *sql.DB
 	dataDir string
 }
 
@@ -60,7 +56,7 @@ func Open(path string) (*SqliteDB, error) {
 
 func (sq *SqliteDB) tableExists(tableName string) (bool, error) {
 	var table string
-	err := sq.db.QueryRow("SELECT name FROM sqlite_master WHERE type='table' AND name=?", tableName).Scan(&table)
+	err := sq.DB.QueryRow("SELECT name FROM sqlite_master WHERE type='table' AND name=?", tableName).Scan(&table)
 	switch {
 	case err == sql.ErrNoRows:
 		log.Printf("Table %s does not exist", tableName)
@@ -84,7 +80,7 @@ func (sq *SqliteDB) createTable(tableName string) error {
 	default:
 		return fmt.Errorf("table %s not found", tableName)
 	}
-	_, err := sq.db.Exec(tableQuery)
+	_, err := sq.DB.Exec(tableQuery)
 	if err != nil {
 		log.Println("Error creating table: ", err)
 		return err

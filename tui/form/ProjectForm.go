@@ -4,7 +4,9 @@ import (
 	"log"
 
 	"github.com/Desgue/Tasker-Cli/domain"
+	"github.com/Desgue/Tasker-Cli/repo"
 	"github.com/Desgue/Tasker-Cli/repo/db"
+	"github.com/Desgue/Tasker-Cli/svc"
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/Desgue/Tasker-Cli/types"
@@ -16,7 +18,7 @@ import (
 
 // ProjectForm is a form for creating a new project
 type ProjectForm struct {
-	repo        *db.SqliteDB
+	service     svc.ProjectService
 	title       textinput.Model
 	description textarea.Model
 	styles      *style.FormStyle
@@ -25,14 +27,11 @@ type ProjectForm struct {
 	Height      int
 }
 
-func NewProjectForm(repo *db.SqliteDB) *ProjectForm {
-	form := &ProjectForm{styles: style.DefaultFormStyle(), repo: repo}
-	form.title = textinput.New()
-	form.title.Placeholder = "Add a title for the project"
-	form.title.Cursor.Blink = true
-	form.title.Focus()
-	form.description = textarea.New()
-	form.description.Placeholder = "Add a description for the project"
+func NewProjectForm(db *db.SqliteDB) *ProjectForm {
+	repository := repo.NewProjectRepository(db)
+	service := svc.NewProjectService(repository)
+	form := &ProjectForm{styles: style.DefaultFormStyle(), service: service}
+	form.defaultConfig()
 	return form
 
 }
@@ -98,6 +97,14 @@ func (m ProjectForm) View() string {
 }
 
 // HELPERS
+func (form *ProjectForm) defaultConfig() {
+	form.title = textinput.New()
+	form.title.Placeholder = "Add a title for the project"
+	form.title.Cursor.Blink = true
+	form.title.Focus()
+	form.description = textarea.New()
+	form.description.Placeholder = "Add a description for the project"
+}
 
 func (m *ProjectForm) next() {
 	m.title.Blur()
@@ -119,7 +126,12 @@ func (m ProjectForm) GoToProjectList() tea.Msg {
 
 }
 func (m ProjectForm) CreateProject() tea.Msg {
-	p := domain.NewProject(m.title.Value(), m.description.Value(), m.focused)
-	return p
+	p := domain.NewProjectRequest(m.title.Value(), m.description.Value(), m.focused)
+	createdProject, err := m.service.AddProject(p)
+	if err != nil {
+		log.Println(err)
+		return err
+	}
+	return createdProject
 
 }

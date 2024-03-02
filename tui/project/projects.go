@@ -2,7 +2,9 @@ package project
 
 import (
 	"github.com/Desgue/Tasker-Cli/domain"
+	"github.com/Desgue/Tasker-Cli/repo"
 	"github.com/Desgue/Tasker-Cli/repo/db"
+	"github.com/Desgue/Tasker-Cli/svc"
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/Desgue/Tasker-Cli/types"
@@ -14,7 +16,7 @@ import (
 const divisor int = 4
 
 type Model struct {
-	repo    *db.SqliteDB
+	service svc.ProjectService
 	Lists   []list.Model
 	Err     error
 	Focused types.Priority
@@ -24,8 +26,11 @@ type Model struct {
 	height  int
 }
 
-func New(repo *db.SqliteDB) *Model {
-	m := &Model{styles: style.DefaultStyles(), repo: repo, Focused: domain.Low}
+func New(db *db.SqliteDB) *Model {
+	repository := repo.NewProjectRepository(db)
+	service := svc.NewProjectService(repository)
+
+	m := &Model{styles: style.DefaultStyles(), service: service, Focused: domain.Low}
 	return m
 }
 
@@ -34,28 +39,9 @@ func (m *Model) InitLists(w, h int) {
 	defaultList.SetStatusBarItemName("Project", "Projects")
 	defaultList.SetShowHelp(false)
 	m.Lists = []list.Model{defaultList, defaultList, defaultList}
-
-	// Init domain.Low Priority
-	m.Lists[domain.Low].Title = "domain.Low Priority"
-	m.Lists[domain.Low].SetItems([]list.Item{
-		domain.NewProject("Project 1", "domain.Low Priority Project 1 ", domain.Low),
-		domain.NewProject("Project 2", "domain.Low Priority Project 2", domain.Low),
-		domain.NewProject("Project 3", "domain.Low Priority Project 3", domain.Low),
-	})
-
-	// Init domain.Medium Priority
-	m.Lists[domain.Medium].Title = "domain.Medium Priority"
-	m.Lists[domain.Medium].SetItems([]list.Item{
-		domain.NewProject("Project 4", "domain.Medium Priority Project 1", domain.Medium),
-		domain.NewProject("Project 5", "domain.Medium Priority Project 2", domain.Medium),
-		domain.NewProject("Project 6", "domain.Medium Priority Project 3", domain.Medium),
-	})
-
-	// Init domain.High Priority
-	m.Lists[domain.High].Title = "domain.High Priority"
-	m.Lists[domain.High].SetItems([]list.Item{
-		domain.NewProject("Project 7", "domain.High Priority Project 1", domain.High),
-	})
+	for i := 0; i < len(m.Lists); i++ {
+		m.Lists[i].Title = types.Priority(i).String()
+	}
 
 }
 
@@ -73,8 +59,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.InitLists(msg.Width, msg.Height)
 		m.loaded = true
 	case domain.ProjectItem:
-		m.Lists[msg.Priority].InsertItem(0, msg)
-		return m, nil
+		m.fetchItems()
+		m, cmd := m.Update(nil)
+		return m, cmd
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "l", "right":
@@ -82,7 +69,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "h", "left":
 			m.previous()
 		case "space", "enter":
-			m.moveToNext()
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				m.moveToNext()
+			}
 		case "backspace":
 			m.moveToPrevious()
 		case "n":
@@ -132,8 +121,16 @@ func (m Model) View() string {
 }
 
 // HELPERS
-func (m Model) CreateProject(p domain.ProjectItem) (domain.ProjectItem, error) {
-	return p, nil
+
+func (m *Model) fetchItems() {
+	projects, err := m.service.GetProjects()
+	if err != nil {
+		m.Err = err
+		return
+	}
+	for _, p := range projects {
+		m.Lists[p.Priority].InsertItem(0, p)
+	}
 }
 
 func (m Model) GoToTasks() tea.Msg {
