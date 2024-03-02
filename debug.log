@@ -169,3 +169,126 @@ debug 2024/03/01 21:51:43 Low
 debug 2024/03/01 21:52:22 High
 debug 2024/03/01 21:55:09 Low
 debug 2024/03/01 22:43:55 ProjectId:  0
+debug 2024/03/02 11:15:16 High
+debug 2024/03/02 11:15:22 High
+debug 2024/03/02 12:14:52 Error opening database: sql: no rows in result set
+debug 2024/03/02 12:16:21 res:  {0xc000090090 0xc00000a640}
+debug 2024/03/02 12:16:21 res:  {0xc000090090 0xc00000acf0}
+debug 2024/03/02 12:19:54 res:  &{0xc000090090 0xf8a20 0xc000066230 <nil> <nil> {[] {} <nil>} {{0 0} 0 0 {{} 0} {{} 0}} false <nil> [] false false}
+debug 2024/03/02 12:19:54 res:  &{0xc000090240 0xf8a20 0xc000066280 <nil> <nil> {[] {} <nil>} {{0 0} 0 0 {{} 0} {{} 0}} false <nil> [] false false}
+debug 2024/03/02 12:21:31 res:  &{0xc000090090 0xea38e0 0xc000066230 <nil> <nil> {[] {} <nil>} {{0 0} 0 0 {{} 0} {{} 0}} false <nil> [] false false}
+debug 2024/03/02 12:21:31 res:  &{0xc000134090 0xea38e0 0xc00013e000 <nil> <nil> {[] {} <nil>} {{0 0} 0 0 {{} 0} {{} 0}} false <nil> [] false false}
+debug 2024/03/02 12:21:37 res:  
+debug 2024/03/02 12:21:37 res:  
+debug 2024/03/02 12:21:46 res:  false
+debug 2024/03/02 12:21:46 res:  false
+debug 2024/03/02 12:32:51 Error creating enum:  SQL logic error: near "TYPE": syntax error (1)
+debug 2024/03/02 12:32:51 Error opening database: SQL logic error: near "TYPE": syntax error (1)
+debug 2024/03/02 12:39:06 Error creating table:  SQL logic error: near "IDENTITY": syntax error (1)
+debug 2024/03/02 12:39:06 Error opening database: SQL logic error: near "IDENTITY": syntax error (1)
+debug 2024/03/02 12:41:19 Error creating table:  SQL logic error: AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY (1)
+debug 2024/03/02 12:41:19 Error opening database: SQL logic error: AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY (1)
+debug 2024/03/02 12:41:27 Error creating table:  SQL logic error: AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY (1)
+debug 2024/03/02 12:41:27 Error opening database: SQL logic error: AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY (1)
+debug 2024/03/02 12:42:21 Error creating table:  SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:42:21 Error opening database: SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:44:00 Error creating table:  SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:44:00 Error opening database: SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:44:18 Error creating table:  SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:44:18 Error opening database: SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:45:03 Error creating table:  SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:45:03 Error opening database: SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:45:18 Error creating table:  SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:45:18 Error opening database: SQL logic error: near "(": syntax error (1)
+debug 2024/03/02 12:53:56 table projects exists
+debug 2024/03/02 12:53:56 Error creating table:  SQL logic error: near ")": syntax error (1)
+debug 2024/03/02 12:53:56 Error opening database: SQL logic error: near ")": syntax error (1)
+debug 2024/03/02 12:55:37 Table projects created
+debug 2024/03/02 12:55:37 table projects exists
+debug 2024/03/02 12:55:37 Error creating table:  SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:55:37 Error opening database: SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:57:11 Table projects created
+debug 2024/03/02 12:57:11 Error creating table:  SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:57:11 Error opening database: SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:57:28 Table projects created
+debug 2024/03/02 12:57:28 Error creating table:  SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:57:28 Error opening database: SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:57:37 Table projects created
+debug 2024/03/02 12:57:37 Error creating table:  SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 12:57:37 Error opening database: SQL logic error: near "', '": syntax error (1)
+debug 2024/03/02 13:01:11 Table projects created
+debug 2024/03/02 13:01:11 Table tasks created
+debug 2024/03/02 13:01:18 Table projects created
+debug 2024/03/02 13:01:18 Table tasks created
+debug 2024/03/02 13:02:07 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:02:07 Table projects created
+debug 2024/03/02 13:02:07 Table tasks created
+debug 2024/03/02 13:06:48 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:06:48 Table projects does not %!s(bool=false), creating it
+debug 2024/03/02 13:06:48 Table projects created
+debug 2024/03/02 13:06:48 Table tasks does not %!s(bool=false), creating it
+debug 2024/03/02 13:06:48 Table tasks created
+debug 2024/03/02 13:07:31 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:07:31 Error opening database: table Projects not found
+debug 2024/03/02 13:10:12 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:10:12 Error opening database: table Projects not found
+debug 2024/03/02 13:10:30 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:10:30 Table Projects created
+debug 2024/03/02 13:10:30 Table Tasks created
+debug 2024/03/02 13:10:41 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:10:41 Table Projects created
+debug 2024/03/02 13:10:41 Table Tasks created
+debug 2024/03/02 13:11:39 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:11:39 exist:  false
+debug 2024/03/02 13:11:39 Table Projects created
+debug 2024/03/02 13:11:39 exist:  false
+debug 2024/03/02 13:11:39 Table Tasks created
+debug 2024/03/02 13:18:30 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:18:30 exist:  
+debug 2024/03/02 13:18:30 Table Projects created
+debug 2024/03/02 13:18:30 exist:  
+debug 2024/03/02 13:18:30 Table Tasks created
+debug 2024/03/02 13:19:29 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:19:29 exist:  
+debug 2024/03/02 13:19:29 Table Projects exists
+debug 2024/03/02 13:19:29 exist:  
+debug 2024/03/02 13:19:29 Table Tasks exists
+debug 2024/03/02 13:21:13 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:21:13 exist:  
+debug 2024/03/02 13:21:13 Table Projects created
+debug 2024/03/02 13:21:13 exist:  
+debug 2024/03/02 13:21:13 Table Tasks created
+debug 2024/03/02 13:24:51 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:24:51 exist:  false
+debug 2024/03/02 13:24:51 Table Projects created
+debug 2024/03/02 13:24:51 exist:  false
+debug 2024/03/02 13:24:51 Table Tasks created
+debug 2024/03/02 13:25:22 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:25:22 exist:  false
+debug 2024/03/02 13:25:22 Table Projects created
+debug 2024/03/02 13:25:22 exist:  false
+debug 2024/03/02 13:25:22 Table Tasks created
+debug 2024/03/02 13:25:39 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:25:39 Error checking table existance:  sql: no rows in result set
+debug 2024/03/02 13:25:39 exist:  false
+debug 2024/03/02 13:25:39 Table Projects created
+debug 2024/03/02 13:25:39 Error checking table existance:  sql: no rows in result set
+debug 2024/03/02 13:25:39 exist:  false
+debug 2024/03/02 13:25:39 Table Tasks created
+debug 2024/03/02 13:26:42 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:26:42 Error checking table existance:  sql: Scan error on column index 0, name "name": sql/driver: couldn't convert "Projects" into type bool
+debug 2024/03/02 13:26:42 exist:  false
+debug 2024/03/02 13:26:42 Table Projects created
+debug 2024/03/02 13:26:42 Error checking table existance:  sql: Scan error on column index 0, name "name": sql/driver: couldn't convert "Projects" into type bool
+debug 2024/03/02 13:26:42 exist:  false
+debug 2024/03/02 13:26:42 Table Tasks created
+debug 2024/03/02 13:27:18 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:27:18 Error checking table existance:  sql: Scan error on column index 0, name "name": sql/driver: couldn't convert "Projects" into type bool
+debug 2024/03/02 13:27:18 exist:  false
+debug 2024/03/02 13:27:18 Table Projects created
+debug 2024/03/02 13:27:18 Error checking table existance:  sql: Scan error on column index 0, name "name": sql/driver: couldn't convert "Projects" into type bool
+debug 2024/03/02 13:27:18 exist:  false
+debug 2024/03/02 13:27:18 Table Tasks created
+debug 2024/03/02 13:28:00 Database opened at path: C:\Users\guede\AppData\Local\tasker
+debug 2024/03/02 13:28:00 Table Projects exists
+debug 2024/03/02 13:28:00 Table Tasks exists
