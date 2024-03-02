@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Desgue/Tasker-Cli/repo"
+	"github.com/Desgue/Tasker-Cli/repo/db"
 	"github.com/Desgue/Tasker-Cli/tui/form"
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/project"
@@ -18,15 +18,15 @@ const (
 type State int
 
 type model struct {
-	repo         *repo.SqliteDB
+	db           *db.SqliteDB
 	currentState State
 	models       []tea.Model
 }
 
-func New(state State, repo *repo.SqliteDB) *model {
-	model := &model{repo: repo}
+func New(state State, db *db.SqliteDB) *model {
+	model := &model{db: db}
 	model.currentState = state
-	model.models = []tea.Model{project.New(repo), form.NewProjectForm(repo), task.New()}
+	model.models = []tea.Model{project.New(db), form.NewProjectForm(db), task.New()}
 	return model
 }
 
@@ -40,7 +40,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	// STATE CHANGE MESSAGES
 	case message.ShowProjectForm:
 		m.currentState = projectForm
-		m.models[projectForm], cmd = form.NewProjectForm(m.repo).Update(msg)
+		m.models[projectForm], cmd = form.NewProjectForm(m.db).Update(msg)
 		return m, cmd
 	case message.ShowProjectList:
 		m.currentState = projects

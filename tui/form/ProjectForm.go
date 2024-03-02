@@ -3,7 +3,7 @@ package form
 import (
 	"log"
 
-	"github.com/Desgue/Tasker-Cli/repo"
+	"github.com/Desgue/Tasker-Cli/repo/db"
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/project"
 	"github.com/Desgue/Tasker-Cli/tui/style"
@@ -16,7 +16,7 @@ import (
 
 // ProjectForm is a form for creating a new project
 type ProjectForm struct {
-	repo        *repo.SqliteDB
+	repo        *db.SqliteDB
 	title       textinput.Model
 	description textarea.Model
 	styles      *style.FormStyle
@@ -25,7 +25,7 @@ type ProjectForm struct {
 	Height      int
 }
 
-func NewProjectForm(repo *repo.SqliteDB) *ProjectForm {
+func NewProjectForm(repo *db.SqliteDB) *ProjectForm {
 	form := &ProjectForm{styles: style.DefaultFormStyle(), repo: repo}
 	form.title = textinput.New()
 	form.title.Placeholder = "Add a title for the project"

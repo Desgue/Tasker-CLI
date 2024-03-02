@@ -4,18 +4,18 @@ import (
 	"log"
 
 	"github.com/Desgue/Tasker-Cli/cfg"
-	"github.com/Desgue/Tasker-Cli/repo"
+	"github.com/Desgue/Tasker-Cli/repo/db"
 	tea "github.com/charmbracelet/bubbletea"
 )
 
 func main() {
 	dir := cfg.SetupPath()
-	repo, err := repo.Open(dir)
+	db, err := db.Open(dir)
 	if err != nil {
 		log.Fatalf("Error opening database: %v", err)
 	}
 
-	m := New(projects, repo)
+	m := New(projects, db)
 
 	f, err := tea.LogToFile("debug.log", "debug")
 	if err != nil {
