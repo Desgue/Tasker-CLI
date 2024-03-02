@@ -63,6 +63,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			if m.Lists[m.Focused].SelectedItem() != nil {
 				m.moveToNext()
 			}
+			m.InitLists(m.width, m.height)
+			m, cmd := m.Update(nil)
+			return m, cmd
 		case "d", "delete":
 			selected := m.Lists[m.Focused].SelectedItem()
 			if selected != nil {
@@ -80,7 +83,12 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, cmd
 
 		case "backspace":
-			m.moveToPrevious()
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				m.moveToPrevious()
+			}
+			m.InitLists(m.width, m.height)
+			m, cmd := m.Update(nil)
+			return m, cmd
 		case "n":
 			return m, m.GoToForm
 		case "t":
@@ -170,18 +178,17 @@ func (m Model) GoToForm() tea.Msg {
 func (m *Model) moveToNext() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
 	selectedProject := selectedItem.(domain.ProjectItem)
-	m.Lists[selectedProject.Priority].RemoveItem(m.Lists[m.Focused].Index())
 	selectedProject.Next()
-	m.Lists[selectedProject.Priority].InsertItem(0, selectedProject)
-
+	req := domain.ProjectRequestFromItem(selectedProject)
+	m.service.UpdateProject(req)
 }
 
 func (m *Model) moveToPrevious() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
 	selectedProject := selectedItem.(domain.ProjectItem)
-	m.Lists[selectedProject.Priority].RemoveItem(m.Lists[m.Focused].Index())
 	selectedProject.Previous()
-	m.Lists[selectedProject.Priority].InsertItem(0, selectedProject)
+	req := domain.ProjectRequestFromItem(selectedProject)
+	m.service.UpdateProject(req)
 
 }
 

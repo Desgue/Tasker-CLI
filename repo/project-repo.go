@@ -11,6 +11,7 @@ type ProjectRepository interface {
 	CreateProject(domain.ProjectRequest) (domain.ProjectRequest, error)
 	GetProjects() ([]domain.ProjectRequest, error)
 	DeleteProject(int) error
+	UpdateProject(domain.ProjectRequest) (domain.ProjectRequest, error)
 }
 
 type projectRepository struct {
@@ -72,4 +73,14 @@ func (r *projectRepository) DeleteProject(id int) error {
 		return err
 	}
 	return nil
+}
+
+func (r *projectRepository) UpdateProject(p domain.ProjectRequest) (domain.ProjectRequest, error) {
+	log.Println("Hello from repo updateproject")
+	log.Println("Updating project with id:", p.Id)
+	_, err := r.sql.DB.Exec("UPDATE Projects SET title = $1, description = $2, priority = $3 WHERE id = $4", p.Title, p.Description, p.Priority, p.Id)
+	if err != nil {
+		return domain.ProjectRequest{}, err
+	}
+	return p, nil
 }

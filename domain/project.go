@@ -17,6 +17,15 @@ type ProjectRequest struct {
 	Priority    string `json:"priority" db:"priority"`
 }
 
+func ProjectRequestFromItem(p ProjectItem) ProjectRequest {
+	return ProjectRequest{
+		Id:          p.Id,
+		Title:       p.title,
+		Description: p.description,
+		Priority:    p.Priority.String(),
+	}
+}
+
 func NewProjectRequest(title, description string, Priority types.Priority) ProjectRequest {
 	PriorityStr := Priority.String()
 	return ProjectRequest{

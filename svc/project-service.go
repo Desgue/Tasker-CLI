@@ -11,6 +11,7 @@ type ProjectService interface {
 	AddProject(domain.ProjectRequest) (domain.ProjectItem, error)
 	GetProjects() ([]domain.ProjectItem, error)
 	DeleteProject(int) error
+	UpdateProject(domain.ProjectRequest) (domain.ProjectItem, error)
 }
 
 type projectService struct {
@@ -51,4 +52,14 @@ func (s *projectService) DeleteProject(id int) error {
 		return err
 	}
 	return nil
+}
+
+func (s *projectService) UpdateProject(p domain.ProjectRequest) (domain.ProjectItem, error) {
+	log.Println("Hello from service updateproject")
+	projectRes, err := s.repo.UpdateProject(p)
+	if err != nil {
+		return domain.ProjectItem{}, err
+	}
+	item := domain.NewProjectItem(projectRes)
+	return item, nil
 }
