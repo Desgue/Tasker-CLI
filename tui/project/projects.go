@@ -1,6 +1,7 @@
 package project
 
 import (
+	"github.com/Desgue/Tasker-Cli/repo"
 	"github.com/Desgue/Tasker-Cli/tui/message"
 	"github.com/Desgue/Tasker-Cli/tui/style"
 	"github.com/Desgue/Tasker-Cli/types"
@@ -12,6 +13,7 @@ import (
 const divisor int = 4
 
 type Model struct {
+	repo    *repo.SqliteDB
 	Lists   []list.Model
 	Err     error
 	Focused types.Priority
@@ -21,8 +23,8 @@ type Model struct {
 	height  int
 }
 
-func New() *Model {
-	m := &Model{styles: style.DefaultStyles()}
+func New(repo *repo.SqliteDB) *Model {
+	m := &Model{styles: style.DefaultStyles(), repo: repo, Focused: Low}
 	return m
 }
 

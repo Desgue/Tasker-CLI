@@ -9,7 +9,13 @@ import (
 )
 
 func main() {
-	//m := New(projects)
+	dir := cfg.SetupPath()
+	repo, err := repo.Open(dir)
+	if err != nil {
+		log.Fatalf("Error opening database: %v", err)
+	}
+
+	m := New(projects, repo)
 
 	f, err := tea.LogToFile("debug.log", "debug")
 	if err != nil {
@@ -17,16 +23,10 @@ func main() {
 	}
 	defer f.Close()
 
-	dir := cfg.SetupPath()
-	_, err = repo.Open(dir)
-	if err != nil {
-		log.Fatalf("Error opening database: %v", err)
-	}
-
-	/* p := tea.NewProgram(m, tea.WithAltScreen())
+	p := tea.NewProgram(m, tea.WithAltScreen())
 	_, err = p.Run()
 	if err != nil {
 		log.Fatalf("Error running program: %v", err)
-	} */
+	}
 
 }
