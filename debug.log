@@ -377,3 +377,131 @@ debug 2024/03/02 17:34:12 Hello from repo createproject
 debug 2024/03/02 17:34:12 Project created with id: 2
 debug 2024/03/02 17:34:12 Hello from service getprojects
 debug 2024/03/02 17:34:12 Hello from repo getprojects
+debug 2024/03/02 17:35:52 Hello from service getprojects
+debug 2024/03/02 17:35:52 Hello from repo getprojects
+debug 2024/03/02 17:38:08 Hello from service getprojects
+debug 2024/03/02 17:38:08 Hello from repo getprojects
+debug 2024/03/02 17:38:09 Medium
+debug 2024/03/02 17:38:11 Hello from service addproject
+debug 2024/03/02 17:38:11 Hello from repo createproject
+debug 2024/03/02 17:38:11 Project created with id: 3
+debug 2024/03/02 17:38:11 Hello from service getprojects
+debug 2024/03/02 17:38:11 Hello from repo getprojects
+debug 2024/03/02 17:38:12 High
+debug 2024/03/02 17:38:13 Hello from service addproject
+debug 2024/03/02 17:38:13 Hello from repo createproject
+debug 2024/03/02 17:38:13 Project created with id: 4
+debug 2024/03/02 17:38:13 Hello from service getprojects
+debug 2024/03/02 17:38:13 Hello from repo getprojects
+debug 2024/03/02 17:38:18 Hello from service getprojects
+debug 2024/03/02 17:38:18 Hello from repo getprojects
+debug 2024/03/02 17:38:24 High
+debug 2024/03/02 17:38:25 Hello from service addproject
+debug 2024/03/02 17:38:25 Hello from repo createproject
+debug 2024/03/02 17:38:25 Project created with id: 5
+debug 2024/03/02 17:38:25 Hello from service getprojects
+debug 2024/03/02 17:38:25 Hello from repo getprojects
+debug 2024/03/02 17:39:05 Hello from service getprojects
+debug 2024/03/02 17:39:05 Hello from repo getprojects
+debug 2024/03/02 17:39:06 Medium
+debug 2024/03/02 17:39:10 Hello from service addproject
+debug 2024/03/02 17:39:10 Hello from repo createproject
+debug 2024/03/02 17:39:10 Project created with id: 6
+debug 2024/03/02 17:39:10 Hello from service getprojects
+debug 2024/03/02 17:39:10 Hello from repo getprojects
+debug 2024/03/02 17:39:20 Hello from service getprojects
+debug 2024/03/02 17:39:20 Hello from repo getprojects
+debug 2024/03/02 17:39:23 High
+debug 2024/03/02 17:39:29 Hello from service addproject
+debug 2024/03/02 17:39:29 Hello from repo createproject
+debug 2024/03/02 17:39:29 Project created with id: 1
+debug 2024/03/02 17:39:29 Hello from service getprojects
+debug 2024/03/02 17:39:29 Hello from repo getprojects
+debug 2024/03/02 17:39:31 Medium
+debug 2024/03/02 17:39:37 Hello from service addproject
+debug 2024/03/02 17:39:37 Hello from repo createproject
+debug 2024/03/02 17:39:37 Project created with id: 2
+debug 2024/03/02 17:39:37 Hello from service getprojects
+debug 2024/03/02 17:39:37 Hello from repo getprojects
+debug 2024/03/02 17:39:45 Low
+debug 2024/03/02 17:39:51 Hello from service addproject
+debug 2024/03/02 17:39:51 Hello from repo createproject
+debug 2024/03/02 17:39:51 Project created with id: 3
+debug 2024/03/02 17:39:51 Hello from service getprojects
+debug 2024/03/02 17:39:51 Hello from repo getprojects
+debug 2024/03/02 17:42:30 Hello from service getprojects
+debug 2024/03/02 17:42:30 Hello from repo getprojects
+debug 2024/03/02 17:42:32 High
+debug 2024/03/02 17:42:43 Hello from service addproject
+debug 2024/03/02 17:42:43 Hello from repo createproject
+debug 2024/03/02 17:42:43 Project created with id: 4
+debug 2024/03/02 17:42:43 Hello from service getprojects
+debug 2024/03/02 17:42:43 Hello from repo getprojects
+debug 2024/03/02 17:46:29 Hello from service getprojects
+debug 2024/03/02 17:46:29 Hello from repo getprojects
+debug 2024/03/02 17:46:31 Hello from service deleteproject
+debug 2024/03/02 17:46:31 Hello from repo deleteproject
+debug 2024/03/02 17:46:34 Hello from service getprojects
+debug 2024/03/02 17:46:34 Hello from repo getprojects
+debug 2024/03/02 17:46:57 Hello from service getprojects
+debug 2024/03/02 17:46:57 Hello from repo getprojects
+debug 2024/03/02 17:47:00 Hello from service deleteproject
+debug 2024/03/02 17:47:00 Hello from repo deleteproject
+debug 2024/03/02 17:47:00 SQL logic error: near "*": syntax error (1)
+debug 2024/03/02 17:47:00 Hello from service deleteproject
+debug 2024/03/02 17:47:00 Hello from repo deleteproject
+debug 2024/03/02 17:47:00 SQL logic error: near "*": syntax error (1)
+debug 2024/03/02 17:47:03 Hello from service getprojects
+debug 2024/03/02 17:47:03 Hello from repo getprojects
+debug 2024/03/02 17:49:32 Hello from service getprojects
+debug 2024/03/02 17:49:32 Hello from repo getprojects
+debug 2024/03/02 17:49:34 Hello from service deleteproject
+debug 2024/03/02 17:49:34 Hello from repo deleteproject
+debug 2024/03/02 17:49:41 Hello from service getprojects
+debug 2024/03/02 17:49:41 Hello from repo getprojects
+debug 2024/03/02 17:52:16 Hello from service getprojects
+debug 2024/03/02 17:52:16 Hello from repo getprojects
+debug 2024/03/02 17:52:17 Hello from service deleteproject
+debug 2024/03/02 17:52:17 Hello from repo deleteproject
+debug 2024/03/02 17:52:17 Deleting project with id: 0
+debug 2024/03/02 17:52:18 Hello from service deleteproject
+debug 2024/03/02 17:52:18 Hello from repo deleteproject
+debug 2024/03/02 17:52:18 Deleting project with id: 0
+debug 2024/03/02 17:52:18 Hello from service deleteproject
+debug 2024/03/02 17:52:18 Hello from repo deleteproject
+debug 2024/03/02 17:52:18 Deleting project with id: 0
+debug 2024/03/02 17:52:18 Hello from service deleteproject
+debug 2024/03/02 17:52:18 Hello from repo deleteproject
+debug 2024/03/02 17:52:18 Deleting project with id: 0
+debug 2024/03/02 17:53:38 Hello from service getprojects
+debug 2024/03/02 17:53:38 Hello from repo getprojects
+debug 2024/03/02 17:53:40 Hello from service deleteproject
+debug 2024/03/02 17:53:40 Hello from repo deleteproject
+debug 2024/03/02 17:53:40 Deleting project with id: 4
+debug 2024/03/02 17:53:46 High
+debug 2024/03/02 17:53:49 Hello from service getprojects
+debug 2024/03/02 17:53:49 Hello from repo getprojects
+debug 2024/03/02 17:54:41 Hello from service getprojects
+debug 2024/03/02 17:54:41 Hello from repo getprojects
+debug 2024/03/02 17:54:42 Low
+debug 2024/03/02 17:54:44 Hello from service addproject
+debug 2024/03/02 17:54:44 Hello from repo createproject
+debug 2024/03/02 17:54:44 Project created with id: 5
+debug 2024/03/02 17:54:44 Hello from service getprojects
+debug 2024/03/02 17:54:44 Hello from repo getprojects
+debug 2024/03/02 17:54:45 Hello from service deleteproject
+debug 2024/03/02 17:54:45 Hello from repo deleteproject
+debug 2024/03/02 17:54:45 Deleting project with id: 5
+debug 2024/03/02 17:54:45 Hello from service getprojects
+debug 2024/03/02 17:54:45 Hello from repo getprojects
+debug 2024/03/02 17:54:53 Low
+debug 2024/03/02 17:54:58 Hello from service addproject
+debug 2024/03/02 17:54:58 Hello from repo createproject
+debug 2024/03/02 17:54:58 Project created with id: 6
+debug 2024/03/02 17:54:58 Hello from service getprojects
+debug 2024/03/02 17:54:58 Hello from repo getprojects
+debug 2024/03/02 17:55:00 Hello from service deleteproject
+debug 2024/03/02 17:55:00 Hello from repo deleteproject
+debug 2024/03/02 17:55:00 Deleting project with id: 6
+debug 2024/03/02 17:55:00 Hello from service getprojects
+debug 2024/03/02 17:55:00 Hello from repo getprojects

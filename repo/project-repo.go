@@ -10,6 +10,7 @@ import (
 type ProjectRepository interface {
 	CreateProject(domain.ProjectRequest) (domain.ProjectRequest, error)
 	GetProjects() ([]domain.ProjectRequest, error)
+	DeleteProject(int) error
 }
 
 type projectRepository struct {
@@ -61,4 +62,14 @@ func (r *projectRepository) GetProjects() ([]domain.ProjectRequest, error) {
 	}
 
 	return projects, nil
+}
+
+func (r *projectRepository) DeleteProject(id int) error {
+	log.Println("Hello from repo deleteproject")
+	log.Println("Deleting project with id:", id)
+	_, err := r.sql.DB.Exec("DELETE FROM Projects WHERE id = ?", id)
+	if err != nil {
+		return err
+	}
+	return nil
 }

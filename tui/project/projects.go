@@ -1,6 +1,8 @@
 package project
 
 import (
+	"log"
+
 	"github.com/Desgue/Tasker-Cli/domain"
 	"github.com/Desgue/Tasker-Cli/repo"
 	"github.com/Desgue/Tasker-Cli/repo/db"
@@ -34,17 +36,6 @@ func New(db *db.SqliteDB) *Model {
 	return m
 }
 
-func (m *Model) InitLists(w, h int) {
-	defaultList := list.New([]list.Item{}, list.NewDefaultDelegate(), w, h-divisor)
-	defaultList.SetStatusBarItemName("Project", "Projects")
-	defaultList.SetShowHelp(false)
-	m.Lists = []list.Model{defaultList, defaultList, defaultList}
-	for i := 0; i < len(m.Lists); i++ {
-		m.Lists[i].Title = types.Priority(i).String()
-	}
-
-}
-
 func (m Model) Init() tea.Cmd {
 	return nil
 }
@@ -59,7 +50,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.InitLists(msg.Width, msg.Height)
 		m.loaded = true
 	case domain.ProjectItem:
-		m.fetchItems()
+		m.InitLists(m.width, m.height)
 		m, cmd := m.Update(nil)
 		return m, cmd
 	case tea.KeyMsg:
@@ -72,6 +63,22 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			if m.Lists[m.Focused].SelectedItem() != nil {
 				m.moveToNext()
 			}
+		case "d", "delete":
+			selected := m.Lists[m.Focused].SelectedItem()
+			if selected != nil {
+				project := selected.(domain.ProjectItem)
+				err := m.service.DeleteProject(project.Id)
+				if err != nil {
+					log.Println(err)
+					m.Err = err
+					return m, nil
+				}
+
+			}
+			m.InitLists(m.width, m.height)
+			m, cmd := m.Update(nil)
+			return m, cmd
+
 		case "backspace":
 			m.moveToPrevious()
 		case "n":
@@ -121,7 +128,17 @@ func (m Model) View() string {
 }
 
 // HELPERS
+func (m *Model) InitLists(w, h int) {
+	defaultList := list.New([]list.Item{}, list.NewDefaultDelegate(), w, h-divisor)
+	defaultList.SetStatusBarItemName("Project", "Projects")
+	defaultList.SetShowHelp(false)
+	m.Lists = []list.Model{defaultList, defaultList, defaultList}
+	for i := 0; i < len(m.Lists); i++ {
+		m.Lists[i].Title = types.Priority(i).String()
+	}
+	m.fetchItems()
 
+}
 func (m *Model) fetchItems() {
 	projects, err := m.service.GetProjects()
 	if err != nil {

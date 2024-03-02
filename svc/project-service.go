@@ -10,6 +10,7 @@ import (
 type ProjectService interface {
 	AddProject(domain.ProjectRequest) (domain.ProjectItem, error)
 	GetProjects() ([]domain.ProjectItem, error)
+	DeleteProject(int) error
 }
 
 type projectService struct {
@@ -41,4 +42,13 @@ func (s *projectService) GetProjects() ([]domain.ProjectItem, error) {
 		projects = append(projects, domain.NewProjectItem(p))
 	}
 	return projects, nil
+}
+
+func (s *projectService) DeleteProject(id int) error {
+	log.Println("Hello from service deleteproject")
+	err := s.repo.DeleteProject(id)
+	if err != nil {
+		return err
+	}
+	return nil
 }

@@ -39,6 +39,7 @@ func NewProjectItem(p ProjectRequest) ProjectItem {
 		Priority = Low
 	}
 	return ProjectItem{
+		Id:          p.Id,
 		title:       p.Title,
 		description: p.Description,
 		Priority:    Priority,
