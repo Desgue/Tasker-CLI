@@ -620,3 +620,41 @@ debug 2024/03/02 18:14:47 Hello from repo updateproject
 debug 2024/03/02 18:14:47 Updating project with id: 2
 debug 2024/03/02 18:14:47 Hello from service getprojects
 debug 2024/03/02 18:14:47 Hello from repo getprojects
+debug 2024/03/02 18:23:08 Hello from service getprojects
+debug 2024/03/02 18:23:08 Hello from repo getprojects
+debug 2024/03/02 18:23:11 Low
+debug 2024/03/02 18:23:17 Hello from service addproject
+debug 2024/03/02 18:23:17 Hello from repo createproject
+debug 2024/03/02 18:23:17 Project created with id: 8
+debug 2024/03/02 18:23:17 Hello from service getprojects
+debug 2024/03/02 18:23:17 Hello from repo getprojects
+debug 2024/03/02 18:23:20 Hello from service updateproject
+debug 2024/03/02 18:23:20 Hello from repo updateproject
+debug 2024/03/02 18:23:20 Updating project with id: 8
+debug 2024/03/02 18:23:20 Hello from service getprojects
+debug 2024/03/02 18:23:20 Hello from repo getprojects
+debug 2024/03/02 18:23:22 Hello from service updateproject
+debug 2024/03/02 18:23:22 Hello from repo updateproject
+debug 2024/03/02 18:23:22 Updating project with id: 2
+debug 2024/03/02 18:23:22 Hello from service getprojects
+debug 2024/03/02 18:23:22 Hello from repo getprojects
+debug 2024/03/02 18:23:23 Hello from service updateproject
+debug 2024/03/02 18:23:23 Hello from repo updateproject
+debug 2024/03/02 18:23:23 Updating project with id: 8
+debug 2024/03/02 18:23:23 Hello from service getprojects
+debug 2024/03/02 18:23:23 Hello from repo getprojects
+debug 2024/03/02 18:23:25 Hello from service updateproject
+debug 2024/03/02 18:23:25 Hello from repo updateproject
+debug 2024/03/02 18:23:25 Updating project with id: 8
+debug 2024/03/02 18:23:25 Hello from service getprojects
+debug 2024/03/02 18:23:25 Hello from repo getprojects
+debug 2024/03/02 18:23:27 Hello from service updateproject
+debug 2024/03/02 18:23:27 Hello from repo updateproject
+debug 2024/03/02 18:23:27 Updating project with id: 2
+debug 2024/03/02 18:23:27 Hello from service getprojects
+debug 2024/03/02 18:23:27 Hello from repo getprojects
+debug 2024/03/02 18:23:28 Hello from service deleteproject
+debug 2024/03/02 18:23:28 Hello from repo deleteproject
+debug 2024/03/02 18:23:28 Deleting project with id: 8
+debug 2024/03/02 18:23:28 Hello from service getprojects
+debug 2024/03/02 18:23:28 Hello from repo getprojects
