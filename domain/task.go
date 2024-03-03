@@ -31,6 +31,7 @@ type TaskResponse struct {
 func TaskResponseFromItem(t TaskItem) TaskResponse {
 	return TaskResponse{
 		Id:          t.Id,
+		ProjectId:   t.ProjectId,
 		Title:       t.title,
 		Description: t.description,
 		Status:      t.Status.String(),
@@ -47,8 +48,19 @@ func NewTaskRequest(projectId int, title, description string, Status types.Statu
 	}
 }
 
+func TaskRequestFromItem(t TaskItem) TaskRequest {
+	return TaskRequest{
+		Id:          t.Id,
+		ProjectId:   t.ProjectId,
+		Title:       t.title,
+		Description: t.description,
+		Status:      t.Status.String(),
+	}
+}
+
 type TaskItem struct {
 	Id          int
+	ProjectId   int
 	title       string
 	description string
 	Status      types.Status

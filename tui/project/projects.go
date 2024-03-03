@@ -55,18 +55,17 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, cmd
 	case tea.KeyMsg:
 		switch msg.String() {
+		// QUIT PROGRAM
+		case "q", "ctrl+c":
+			return m, tea.Quit
+
+		// NAVIGATE BETWEEN BOARDS
 		case "l", "right", "tab":
 			m.nextBoardView()
 		case "h", "left":
 			m.previousBoardView()
-		case " ", "ctrl+n":
-			if m.Lists[m.Focused].SelectedItem() != nil {
-				m.increasePriority()
-				m.initLists(m.width, m.height)
 
-			}
-			m, cmd := m.Update(nil)
-			return m, cmd
+		// DELETE PROJECT
 		case "d", "delete":
 			selected := m.Lists[m.Focused].SelectedItem()
 			if selected != nil {
@@ -82,6 +81,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m, cmd := m.Update(nil)
 			return m, cmd
 
+		// UPDATE TASK PRIORITY
 		case "backspace", "ctrl+b":
 			if m.Lists[m.Focused].SelectedItem() != nil {
 				m.lowerPriority()
@@ -89,8 +89,17 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.initLists(m.width, m.height)
 			m, cmd := m.Update(nil)
 			return m, cmd
+		case " ", "ctrl+n":
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				m.increasePriority()
+				m.initLists(m.width, m.height)
+			}
+			m, cmd := m.Update(nil)
+			return m, cmd
+		// GO TO PROJECT FORM
 		case "n":
 			return m, m.GoToForm
+		// GO TO TASKS
 		case "t":
 			if m.Lists[m.Focused].SelectedItem() != nil {
 				return m, m.GoToTasks

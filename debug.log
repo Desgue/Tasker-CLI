@@ -891,3 +891,77 @@ debug 2024/03/03 13:32:04 Hello from service getprojects
 debug 2024/03/03 13:32:04 Hello from repo getprojects
 debug 2024/03/03 13:32:21 Hello from service getprojects
 debug 2024/03/03 13:32:21 Hello from repo getprojects
+debug 2024/03/03 13:46:49 Hello from service getprojects
+debug 2024/03/03 13:46:49 Hello from repo getprojects
+debug 2024/03/03 13:47:01 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:47:02 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:47:02 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:47:08 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:47:08 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:47:09 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:47:09 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:48:17 Hello from service getprojects
+debug 2024/03/03 13:48:17 Hello from repo getprojects
+debug 2024/03/03 13:48:18 Hello from service updateproject
+debug 2024/03/03 13:48:18 Hello from repo updateproject
+debug 2024/03/03 13:48:18 Updating project with id: 1
+debug 2024/03/03 13:48:19 Hello from service getprojects
+debug 2024/03/03 13:48:19 Hello from repo getprojects
+debug 2024/03/03 13:48:22 Hello from service updateproject
+debug 2024/03/03 13:48:22 Hello from repo updateproject
+debug 2024/03/03 13:48:22 Updating project with id: 1
+debug 2024/03/03 13:48:22 Hello from service getprojects
+debug 2024/03/03 13:48:22 Hello from repo getprojects
+debug 2024/03/03 13:51:26 Hello from service getprojects
+debug 2024/03/03 13:51:26 Hello from repo getprojects
+debug 2024/03/03 13:51:27 Hello from service updateproject
+debug 2024/03/03 13:51:27 Hello from repo updateproject
+debug 2024/03/03 13:51:27 Updating project with id: 1
+debug 2024/03/03 13:51:27 Hello from service getprojects
+debug 2024/03/03 13:51:27 Hello from repo getprojects
+debug 2024/03/03 13:52:16 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:17 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:17 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:17 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:17 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:18 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:18 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:52:19 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:55:16 Hello from service getprojects
+debug 2024/03/03 13:55:16 Hello from repo getprojects
+debug 2024/03/03 13:55:28 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:55:29 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:55:29 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:58:58 Hello from service getprojects
+debug 2024/03/03 13:58:58 Hello from repo getprojects
+debug 2024/03/03 13:59:02 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:02 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:02 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:02 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:05 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:07 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:08 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:12 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:12 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:12 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:14 error updating task:  sql: no rows in result set
+debug 2024/03/03 13:59:15 error updating task:  sql: no rows in result set
+debug 2024/03/03 14:00:01 Hello from service getprojects
+debug 2024/03/03 14:00:01 Hello from repo getprojects
+debug 2024/03/03 14:00:03 error updating task:  error fetching updated task: sql: no rows in result set
+debug 2024/03/03 14:01:51 Hello from service getprojects
+debug 2024/03/03 14:01:51 Hello from repo getprojects
+debug 2024/03/03 14:01:57 error updating task:  error fetching updated task: sql: no rows in result set
+debug 2024/03/03 14:02:00 error updating task:  error fetching updated task: sql: no rows in result set
+debug 2024/03/03 14:05:14 Hello from service getprojects
+debug 2024/03/03 14:05:14 Hello from repo getprojects
+debug 2024/03/03 14:05:19 error updating task:  error fetching updated task: sql: no rows in result set
+debug 2024/03/03 14:05:21 error updating task:  error fetching updated task: sql: no rows in result set
+debug 2024/03/03 14:05:21 error updating task:  error fetching updated task: sql: no rows in result set
+debug 2024/03/03 14:05:40 Hello from service getprojects
+debug 2024/03/03 14:05:40 Hello from repo getprojects
+debug 2024/03/03 14:05:41 Hello from service updateproject
+debug 2024/03/03 14:05:41 Hello from repo updateproject
+debug 2024/03/03 14:05:41 Updating project with id: 1
+debug 2024/03/03 14:05:41 Hello from service getprojects
+debug 2024/03/03 14:05:41 Hello from repo getprojects

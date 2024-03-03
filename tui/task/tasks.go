@@ -53,22 +53,40 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, cmd
 	case tea.KeyMsg:
 		switch msg.String() {
+		// QUIT PROGRAM
 		case "q", "ctrl+c":
 			return m, tea.Quit
+		// GO TO PROJECTS KANBANVIEW
 		case "esc":
 			return m, m.GoToProjects
+		// NAVIGATE BETWEEN BOARDS
 		case "l", "right", "tab":
-			m.next()
+			m.nextBoardView()
 		case "h", "left":
-			m.previous()
+			m.previousBoardView()
+
+		// GO TO TASK FORM
 		case "n":
 			return m, m.GoToForm
 
+		// UPDATE TASK STATUS
+		case "ctrl+n", " ":
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				m.moveStatusForward()
+			}
+			m.initLists(m.width, m.height)
+			return m.Update(nil)
+		case "backspace", "ctrl+b":
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				m.moveStatusBackward()
+			}
+			m.initLists(m.width, m.height)
+			return m.Update(nil)
 		}
-		return m, nil
-
 	}
-	return m, nil
+	var cmd tea.Cmd
+	m.Lists[m.Focused], cmd = m.Lists[m.Focused].Update(msg)
+	return m, cmd
 }
 
 func (m Model) View() string {
@@ -122,6 +140,28 @@ func (m *Model) fetchTasks() {
 
 }
 
+func (m *Model) moveStatusForward() {
+	selectedTask := m.Lists[m.Focused].SelectedItem()
+	task := selectedTask.(domain.TaskItem)
+	task.Next()
+	req := domain.TaskRequestFromItem(task)
+	_, err := m.service.UpdateTask(req)
+	if err != nil {
+		log.Println("error updating task: ", err)
+	}
+}
+
+func (m *Model) moveStatusBackward() {
+	selectedTask := m.Lists[m.Focused].SelectedItem()
+	task := selectedTask.(domain.TaskItem)
+	task.Previous()
+	req := domain.TaskRequestFromItem(task)
+	_, err := m.service.UpdateTask(req)
+	if err != nil {
+		log.Println("error updating task: ", err)
+	}
+}
+
 func (m Model) GoToForm() tea.Msg {
 	return message.ShowTaskForm{
 		Focused:   m.Focused,
@@ -134,7 +174,7 @@ func (m Model) GoToProjects() tea.Msg {
 	return message.ShowProjectList{}
 }
 
-func (m *Model) next() {
+func (m *Model) nextBoardView() {
 	if m.Focused < Done {
 		m.Focused++
 	} else {
@@ -143,7 +183,7 @@ func (m *Model) next() {
 
 }
 
-func (m *Model) previous() {
+func (m *Model) previousBoardView() {
 	if m.Focused > Pending {
 		m.Focused--
 	} else {

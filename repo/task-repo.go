@@ -70,14 +70,15 @@ func (r *taskRepository) DeleteTask(id int) error {
 }
 
 func (r *taskRepository) UpdateTask(t domain.TaskRequest) (domain.TaskResponse, error) {
-	_, err := r.sql.DB.Exec("UPDATE Tasks SET title = ?, description = ?, status = ? WHERE id = ?", t.Title, t.Description, t.Status, t.Id)
+	_, err := r.sql.DB.Exec("UPDATE Tasks SET title = ?,  description = ?, status = ? WHERE id = ?", t.Title, t.Description, t.Status, t.Id)
 	if err != nil {
-		return domain.TaskResponse{}, err
+		return domain.TaskResponse{}, fmt.Errorf("error updating task: %s", err)
 	}
 	var response domain.TaskResponse
-	err = r.sql.DB.QueryRow("SELECT * FROM Tasks WHERE id = ?", t.Id).Scan(&response.Id, &response.Title, &response.Description, &response.Status)
+	err = r.sql.DB.QueryRow("SELECT * FROM Tasks WHERE id = ?", t.Id).Scan(&response.Id, &response.ProjectId, &response.Title, &response.Description, &response.Status)
 	if err != nil {
-		return domain.TaskResponse{}, err
+		return domain.TaskResponse{}, fmt.Errorf("error fetching updated task: %s", err)
 	}
 	return response, nil
+
 }
