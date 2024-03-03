@@ -16,6 +16,11 @@ import (
 )
 
 const divisor int = 4
+const (
+	Pending types.Status = iota
+	InProgress
+	Done
+)
 
 type Model struct {
 	service   svc.TaskService
