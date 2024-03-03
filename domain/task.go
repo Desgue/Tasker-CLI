@@ -14,6 +14,7 @@ const (
 
 type TaskRequest struct {
 	Id          int    `json:"id" db:"id"`
+	ProjectId   int    `json:"projectId" db:"projectId"`
 	Title       string `json:"title" db:"title"`
 	Description string `json:"description" db:"description"`
 	Status      string `json:"status" db:"status"`
@@ -21,6 +22,7 @@ type TaskRequest struct {
 
 type TaskResponse struct {
 	Id          int    `json:"id" db:"id"`
+	ProjectId   int    `json:"projectId" db:"projectId"`
 	Title       string `json:"title" db:"title"`
 	Description string `json:"description" db:"description"`
 	Status      string `json:"status" db:"status"`
@@ -35,9 +37,10 @@ func TaskResponseFromItem(t TaskItem) TaskResponse {
 	}
 }
 
-func NewTaskRequest(title, description string, Status types.Status) *TaskRequest {
+func NewTaskRequest(projectId int, title, description string, Status types.Status) TaskRequest {
 	StatusStr := Status.String()
-	return &TaskRequest{
+	return TaskRequest{
+		ProjectId:   projectId,
 		Title:       title,
 		Description: description,
 		Status:      StatusStr,

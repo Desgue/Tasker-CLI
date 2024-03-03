@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	Todo types.Status = iota
+	Pending types.Status = iota
 	InProgress
 	Done
 )

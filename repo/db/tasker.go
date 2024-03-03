@@ -22,7 +22,7 @@ const (
 	projectId INTEGER NOT NULL REFERENCES Projects(id),
 	title text NOT NULL,
 	description text,
-	status text CHECK ( status IN ('Pending', 'InProgress', 'Done')) DEFAULT 'Pending'
+	status text CHECK ( status IN ('Pending', 'In Progress', 'Done')) DEFAULT 'Pending'
 );`
 )
 

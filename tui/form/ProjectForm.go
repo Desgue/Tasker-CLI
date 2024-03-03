@@ -47,15 +47,19 @@ func (m ProjectForm) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.focused = msg.Focused
 		m.Width = msg.Width
 		m.Height = msg.Height
-		log.Println(m.focused)
+		return m, textinput.Blink
 	case tea.KeyMsg:
 		switch msg.String() {
+		//Quit
 		case "ctrl+c":
 			return m, tea.Quit
+		// Reset fields
 		case "crtk+r":
 			m.reset()
+		// Go to KanbanBoard
 		case "esc":
 			return m, m.GoToProjectList
+		// Move between fields
 		case "tab":
 			if m.title.Focused() {
 				m.next()
@@ -63,7 +67,8 @@ func (m ProjectForm) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 			m.previous()
 			return m, textinput.Blink
-		case "enter":
+		// Move from title to description or save if description is focused
+		case "ctrl+s":
 			if m.title.Focused() {
 				m.next()
 				return m, textinput.Blink
@@ -81,14 +86,8 @@ func (m ProjectForm) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m ProjectForm) View() string {
-	m.styles.TextInput.Width(50)
-	m.styles.TextInput.Height(1)
-
-	m.styles.TextArea.Width(m.Width / 4)
-	m.styles.TextArea.Height(m.Height / 4)
 	titleView := m.styles.TextInput.Render(m.title.View())
 	descriptionView := m.styles.TextArea.Render(m.description.View())
-
 	return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, lipgloss.JoinVertical(
 		lipgloss.Center,
 		titleView,
@@ -103,7 +102,7 @@ func (form *ProjectForm) defaultConfig() {
 	form.title.Cursor.Blink = true
 	form.title.Focus()
 	form.description = textarea.New()
-	form.description.Placeholder = "Add a description for the project"
+	form.description.Placeholder = "Add a description"
 }
 
 func (m *ProjectForm) next() {
@@ -115,10 +114,9 @@ func (m *ProjectForm) previous() {
 	m.title.Focus()
 }
 func (m *ProjectForm) reset() {
+	m.title.Reset()
 	m.title.Focus()
-	m.title.SetValue("")
-	m.description.Blur()
-	m.description.SetValue("")
+	m.description.Reset()
 
 }
 func (m ProjectForm) GoToProjectList() tea.Msg {

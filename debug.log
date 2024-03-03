@@ -658,3 +658,236 @@ debug 2024/03/02 18:23:28 Hello from repo deleteproject
 debug 2024/03/02 18:23:28 Deleting project with id: 8
 debug 2024/03/02 18:23:28 Hello from service getprojects
 debug 2024/03/02 18:23:28 Hello from repo getprojects
+debug 2024/03/03 12:28:48 Hello from service getprojects
+debug 2024/03/03 12:28:48 Hello from repo getprojects
+debug 2024/03/03 12:28:51 Low
+debug 2024/03/03 12:29:01 Hello from service addproject
+debug 2024/03/03 12:29:01 Hello from repo createproject
+debug 2024/03/03 12:29:01 Project created with id: 9
+debug 2024/03/03 12:29:01 Hello from service getprojects
+debug 2024/03/03 12:29:01 Hello from repo getprojects
+debug 2024/03/03 12:29:03 Low
+debug 2024/03/03 12:29:13 Hello from service updateproject
+debug 2024/03/03 12:29:13 Hello from repo updateproject
+debug 2024/03/03 12:29:13 Updating project with id: 9
+debug 2024/03/03 12:29:13 Hello from service getprojects
+debug 2024/03/03 12:29:13 Hello from repo getprojects
+debug 2024/03/03 12:29:17 Hello from service updateproject
+debug 2024/03/03 12:29:17 Hello from repo updateproject
+debug 2024/03/03 12:29:17 Updating project with id: 9
+debug 2024/03/03 12:29:17 Hello from service getprojects
+debug 2024/03/03 12:29:17 Hello from repo getprojects
+debug 2024/03/03 12:29:17 Hello from service updateproject
+debug 2024/03/03 12:29:17 Hello from repo updateproject
+debug 2024/03/03 12:29:17 Updating project with id: 1
+debug 2024/03/03 12:29:17 Hello from service getprojects
+debug 2024/03/03 12:29:17 Hello from repo getprojects
+debug 2024/03/03 12:30:06 Hello from service getprojects
+debug 2024/03/03 12:30:06 Hello from repo getprojects
+debug 2024/03/03 12:31:07 Hello from service getprojects
+debug 2024/03/03 12:31:07 Hello from repo getprojects
+debug 2024/03/03 12:31:23 Hello from service getprojects
+debug 2024/03/03 12:31:23 Hello from repo getprojects
+debug 2024/03/03 12:31:25 Hello from service updateproject
+debug 2024/03/03 12:31:25 Hello from repo updateproject
+debug 2024/03/03 12:31:25 Updating project with id: 3
+debug 2024/03/03 12:31:25 Hello from service getprojects
+debug 2024/03/03 12:31:25 Hello from repo getprojects
+debug 2024/03/03 12:31:27 Hello from service updateproject
+debug 2024/03/03 12:31:27 Hello from repo updateproject
+debug 2024/03/03 12:31:27 Updating project with id: 3
+debug 2024/03/03 12:31:27 Hello from service getprojects
+debug 2024/03/03 12:31:27 Hello from repo getprojects
+debug 2024/03/03 12:31:29 Hello from service updateproject
+debug 2024/03/03 12:31:29 Hello from repo updateproject
+debug 2024/03/03 12:31:29 Updating project with id: 9
+debug 2024/03/03 12:31:29 Hello from service getprojects
+debug 2024/03/03 12:31:29 Hello from repo getprojects
+debug 2024/03/03 12:31:31 Hello from service updateproject
+debug 2024/03/03 12:31:31 Hello from repo updateproject
+debug 2024/03/03 12:31:31 Updating project with id: 3
+debug 2024/03/03 12:31:31 Hello from service getprojects
+debug 2024/03/03 12:31:31 Hello from repo getprojects
+debug 2024/03/03 12:31:32 Hello from service getprojects
+debug 2024/03/03 12:31:32 Hello from repo getprojects
+debug 2024/03/03 12:31:32 Hello from service updateproject
+debug 2024/03/03 12:31:32 Hello from repo updateproject
+debug 2024/03/03 12:31:32 Updating project with id: 3
+debug 2024/03/03 12:31:32 Hello from service getprojects
+debug 2024/03/03 12:31:32 Hello from repo getprojects
+debug 2024/03/03 12:31:34 Hello from service updateproject
+debug 2024/03/03 12:31:34 Hello from repo updateproject
+debug 2024/03/03 12:31:34 Updating project with id: 1
+debug 2024/03/03 12:31:34 Hello from service getprojects
+debug 2024/03/03 12:31:34 Hello from repo getprojects
+debug 2024/03/03 12:32:00 Hello from service getprojects
+debug 2024/03/03 12:32:00 Hello from repo getprojects
+debug 2024/03/03 12:32:00 Hello from service updateproject
+debug 2024/03/03 12:32:00 Hello from repo updateproject
+debug 2024/03/03 12:32:00 Updating project with id: 9
+debug 2024/03/03 12:32:00 Hello from service getprojects
+debug 2024/03/03 12:32:00 Hello from repo getprojects
+debug 2024/03/03 12:32:01 Hello from service updateproject
+debug 2024/03/03 12:32:01 Hello from repo updateproject
+debug 2024/03/03 12:32:01 Updating project with id: 9
+debug 2024/03/03 12:32:01 Hello from service getprojects
+debug 2024/03/03 12:32:01 Hello from repo getprojects
+debug 2024/03/03 12:32:04 Hello from service updateproject
+debug 2024/03/03 12:32:04 Hello from repo updateproject
+debug 2024/03/03 12:32:04 Updating project with id: 9
+debug 2024/03/03 12:32:04 Hello from service getprojects
+debug 2024/03/03 12:32:04 Hello from repo getprojects
+debug 2024/03/03 12:32:06 Hello from service updateproject
+debug 2024/03/03 12:32:06 Hello from repo updateproject
+debug 2024/03/03 12:32:06 Updating project with id: 9
+debug 2024/03/03 12:32:06 Hello from service getprojects
+debug 2024/03/03 12:32:06 Hello from repo getprojects
+debug 2024/03/03 12:32:34 Hello from service getprojects
+debug 2024/03/03 12:32:34 Hello from repo getprojects
+debug 2024/03/03 12:32:58 Hello from service getprojects
+debug 2024/03/03 12:32:58 Hello from repo getprojects
+debug 2024/03/03 12:32:59 Hello from service updateproject
+debug 2024/03/03 12:32:59 Hello from repo updateproject
+debug 2024/03/03 12:32:59 Updating project with id: 9
+debug 2024/03/03 12:32:59 Hello from service getprojects
+debug 2024/03/03 12:32:59 Hello from repo getprojects
+debug 2024/03/03 12:33:04 Hello from service updateproject
+debug 2024/03/03 12:33:04 Hello from repo updateproject
+debug 2024/03/03 12:33:04 Updating project with id: 3
+debug 2024/03/03 12:33:04 Hello from service getprojects
+debug 2024/03/03 12:33:04 Hello from repo getprojects
+debug 2024/03/03 12:33:08 Hello from service updateproject
+debug 2024/03/03 12:33:08 Hello from repo updateproject
+debug 2024/03/03 12:33:08 Updating project with id: 9
+debug 2024/03/03 12:33:08 Hello from service getprojects
+debug 2024/03/03 12:33:08 Hello from repo getprojects
+debug 2024/03/03 12:33:35 Hello from service getprojects
+debug 2024/03/03 12:33:35 Hello from repo getprojects
+debug 2024/03/03 12:33:37 Hello from service updateproject
+debug 2024/03/03 12:33:37 Hello from repo updateproject
+debug 2024/03/03 12:33:37 Updating project with id: 2
+debug 2024/03/03 12:33:37 Hello from service getprojects
+debug 2024/03/03 12:33:37 Hello from repo getprojects
+debug 2024/03/03 12:33:49 Hello from service getprojects
+debug 2024/03/03 12:33:49 Hello from repo getprojects
+debug 2024/03/03 12:33:51 Hello from service updateproject
+debug 2024/03/03 12:33:51 Hello from repo updateproject
+debug 2024/03/03 12:33:51 Updating project with id: 2
+debug 2024/03/03 12:33:51 Hello from service getprojects
+debug 2024/03/03 12:33:51 Hello from repo getprojects
+debug 2024/03/03 12:34:04 Medium
+debug 2024/03/03 12:34:07 Hello from service updateproject
+debug 2024/03/03 12:34:07 Hello from repo updateproject
+debug 2024/03/03 12:34:07 Updating project with id: 2
+debug 2024/03/03 12:34:07 Hello from service getprojects
+debug 2024/03/03 12:34:07 Hello from repo getprojects
+debug 2024/03/03 12:34:09 Hello from service updateproject
+debug 2024/03/03 12:34:09 Hello from repo updateproject
+debug 2024/03/03 12:34:09 Updating project with id: 2
+debug 2024/03/03 12:34:09 Hello from service getprojects
+debug 2024/03/03 12:34:09 Hello from repo getprojects
+debug 2024/03/03 12:34:11 Hello from service updateproject
+debug 2024/03/03 12:34:11 Hello from repo updateproject
+debug 2024/03/03 12:34:11 Updating project with id: 3
+debug 2024/03/03 12:34:11 Hello from service getprojects
+debug 2024/03/03 12:34:11 Hello from repo getprojects
+debug 2024/03/03 12:36:05 Hello from service getprojects
+debug 2024/03/03 12:36:05 Hello from repo getprojects
+debug 2024/03/03 12:36:05 Low
+debug 2024/03/03 12:36:17 Low
+debug 2024/03/03 12:36:34 Hello from service deleteproject
+debug 2024/03/03 12:36:34 Hello from repo deleteproject
+debug 2024/03/03 12:36:34 Deleting project with id: 9
+debug 2024/03/03 12:36:34 Hello from service getprojects
+debug 2024/03/03 12:36:34 Hello from repo getprojects
+debug 2024/03/03 12:37:04 Hello from service getprojects
+debug 2024/03/03 12:37:04 Hello from repo getprojects
+debug 2024/03/03 12:37:11 Hello from service getprojects
+debug 2024/03/03 12:37:11 Hello from repo getprojects
+debug 2024/03/03 12:37:20 Low
+debug 2024/03/03 12:37:27 Hello from service addproject
+debug 2024/03/03 12:37:27 Hello from repo createproject
+debug 2024/03/03 12:37:27 Project created with id: 10
+debug 2024/03/03 12:37:27 Hello from service getprojects
+debug 2024/03/03 12:37:27 Hello from repo getprojects
+debug 2024/03/03 12:38:09 Hello from service getprojects
+debug 2024/03/03 12:38:09 Hello from repo getprojects
+debug 2024/03/03 12:38:11 Low
+debug 2024/03/03 12:38:16 Hello from service getprojects
+debug 2024/03/03 12:38:16 Hello from repo getprojects
+debug 2024/03/03 12:38:18 Low
+debug 2024/03/03 12:39:02 Hello from service getprojects
+debug 2024/03/03 12:39:02 Hello from repo getprojects
+debug 2024/03/03 12:39:03 Low
+debug 2024/03/03 12:39:08 Hello from service getprojects
+debug 2024/03/03 12:39:08 Hello from repo getprojects
+debug 2024/03/03 12:39:09 Low
+debug 2024/03/03 12:41:17 Hello from service getprojects
+debug 2024/03/03 12:41:17 Hello from repo getprojects
+debug 2024/03/03 12:43:31 Hello from service getprojects
+debug 2024/03/03 12:43:31 Hello from repo getprojects
+debug 2024/03/03 12:46:47 Hello from service getprojects
+debug 2024/03/03 12:46:47 Hello from repo getprojects
+debug 2024/03/03 12:47:43 Hello from service getprojects
+debug 2024/03/03 12:47:43 Hello from repo getprojects
+debug 2024/03/03 12:50:27 Hello from service getprojects
+debug 2024/03/03 12:50:27 Hello from repo getprojects
+debug 2024/03/03 12:51:59 Hello from service getprojects
+debug 2024/03/03 12:51:59 Hello from repo getprojects
+debug 2024/03/03 12:52:54 Hello from service getprojects
+debug 2024/03/03 12:52:54 Hello from repo getprojects
+debug 2024/03/03 12:53:26 Hello from service getprojects
+debug 2024/03/03 12:53:26 Hello from repo getprojects
+debug 2024/03/03 12:54:26 Hello from service getprojects
+debug 2024/03/03 12:54:26 Hello from repo getprojects
+debug 2024/03/03 12:54:53 Hello from service getprojects
+debug 2024/03/03 12:54:53 Hello from repo getprojects
+debug 2024/03/03 12:57:26 Hello from service getprojects
+debug 2024/03/03 12:57:26 Hello from repo getprojects
+debug 2024/03/03 12:57:41 Hello from service addproject
+debug 2024/03/03 12:57:41 Hello from repo createproject
+debug 2024/03/03 12:57:41 Project created with id: 11
+debug 2024/03/03 12:57:41 Hello from service getprojects
+debug 2024/03/03 12:57:41 Hello from repo getprojects
+debug 2024/03/03 12:59:06 Hello from service getprojects
+debug 2024/03/03 12:59:06 Hello from repo getprojects
+debug 2024/03/03 13:04:13 Hello from service getprojects
+debug 2024/03/03 13:04:13 Hello from repo getprojects
+debug 2024/03/03 13:06:30 Hello from service getprojects
+debug 2024/03/03 13:06:30 Hello from repo getprojects
+debug 2024/03/03 13:08:16 Hello from service getprojects
+debug 2024/03/03 13:08:16 Hello from repo getprojects
+debug 2024/03/03 13:11:26 Hello from service getprojects
+debug 2024/03/03 13:11:26 Hello from repo getprojects
+debug 2024/03/03 13:11:27 error fetching tasks:  missing argument with index 1
+debug 2024/03/03 13:15:02 Hello from service getprojects
+debug 2024/03/03 13:15:02 Hello from repo getprojects
+debug 2024/03/03 13:15:02 error fetching tasks:  error at repository fetching tasks: missing argument with index 1
+debug 2024/03/03 13:15:29 Hello from service getprojects
+debug 2024/03/03 13:15:29 Hello from repo getprojects
+debug 2024/03/03 13:23:05 Hello from service getprojects
+debug 2024/03/03 13:23:05 Hello from repo getprojects
+debug 2024/03/03 13:23:53 Hello from service getprojects
+debug 2024/03/03 13:23:53 Hello from repo getprojects
+debug 2024/03/03 13:24:07 SQL logic error: 3 values for 4 columns (1)
+debug 2024/03/03 13:25:08 Hello from service getprojects
+debug 2024/03/03 13:25:08 Hello from repo getprojects
+debug 2024/03/03 13:25:38 error fetching tasks:  error at repository scanning tasks: sql: expected 5 destination arguments in Scan, not 4
+debug 2024/03/03 13:26:16 Hello from service getprojects
+debug 2024/03/03 13:26:16 Hello from repo getprojects
+debug 2024/03/03 13:26:28 constraint failed: CHECK constraint failed: status IN ('Pending', 'InProgress', 'Done') (275)
+debug 2024/03/03 13:26:29 constraint failed: CHECK constraint failed: status IN ('Pending', 'InProgress', 'Done') (275)
+debug 2024/03/03 13:26:29 constraint failed: CHECK constraint failed: status IN ('Pending', 'InProgress', 'Done') (275)
+debug 2024/03/03 13:28:04 Hello from service getprojects
+debug 2024/03/03 13:28:04 Hello from repo getprojects
+debug 2024/03/03 13:28:17 Hello from service addproject
+debug 2024/03/03 13:28:17 Hello from repo createproject
+debug 2024/03/03 13:28:17 Project created with id: 1
+debug 2024/03/03 13:28:17 Hello from service getprojects
+debug 2024/03/03 13:28:17 Hello from repo getprojects
+debug 2024/03/03 13:30:17 Hello from service getprojects
+debug 2024/03/03 13:30:17 Hello from repo getprojects
+debug 2024/03/03 13:32:04 Hello from service getprojects
+debug 2024/03/03 13:32:04 Hello from repo getprojects
+debug 2024/03/03 13:32:21 Hello from service getprojects
+debug 2024/03/03 13:32:21 Hello from repo getprojects

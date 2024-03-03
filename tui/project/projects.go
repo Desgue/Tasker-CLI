@@ -47,23 +47,24 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.styles.Focused.Width(msg.Width / divisor)
 		m.width = msg.Width
 		m.height = msg.Height
-		m.InitLists(msg.Width, msg.Height)
+		m.initLists(msg.Width, msg.Height)
 		m.loaded = true
 	case domain.ProjectItem:
-		m.InitLists(m.width, m.height)
+		m.initLists(m.width, m.height)
 		m, cmd := m.Update(nil)
 		return m, cmd
 	case tea.KeyMsg:
 		switch msg.String() {
-		case "l", "right":
-			m.next()
+		case "l", "right", "tab":
+			m.nextBoardView()
 		case "h", "left":
-			m.previous()
-		case "space", "enter":
+			m.previousBoardView()
+		case " ", "ctrl+n":
 			if m.Lists[m.Focused].SelectedItem() != nil {
-				m.moveToNext()
+				m.increasePriority()
+				m.initLists(m.width, m.height)
+
 			}
-			m.InitLists(m.width, m.height)
 			m, cmd := m.Update(nil)
 			return m, cmd
 		case "d", "delete":
@@ -76,23 +77,24 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					m.Err = err
 					return m, nil
 				}
-
 			}
-			m.InitLists(m.width, m.height)
+			m.initLists(m.width, m.height)
 			m, cmd := m.Update(nil)
 			return m, cmd
 
-		case "backspace":
+		case "backspace", "ctrl+b":
 			if m.Lists[m.Focused].SelectedItem() != nil {
-				m.moveToPrevious()
+				m.lowerPriority()
 			}
-			m.InitLists(m.width, m.height)
+			m.initLists(m.width, m.height)
 			m, cmd := m.Update(nil)
 			return m, cmd
 		case "n":
 			return m, m.GoToForm
 		case "t":
-			return m, m.GoToTasks
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				return m, m.GoToTasks
+			}
 		}
 	}
 
@@ -136,7 +138,7 @@ func (m Model) View() string {
 }
 
 // HELPERS
-func (m *Model) InitLists(w, h int) {
+func (m *Model) initLists(w, h int) {
 	defaultList := list.New([]list.Item{}, list.NewDefaultDelegate(), w, h-divisor)
 	defaultList.SetStatusBarItemName("Project", "Projects")
 	defaultList.SetShowHelp(false)
@@ -175,7 +177,7 @@ func (m Model) GoToForm() tea.Msg {
 	}
 	return msg
 }
-func (m *Model) moveToNext() /* tea.Msg */ {
+func (m *Model) increasePriority() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
 	selectedProject := selectedItem.(domain.ProjectItem)
 	selectedProject.Next()
@@ -183,7 +185,7 @@ func (m *Model) moveToNext() /* tea.Msg */ {
 	m.service.UpdateProject(req)
 }
 
-func (m *Model) moveToPrevious() /* tea.Msg */ {
+func (m *Model) lowerPriority() /* tea.Msg */ {
 	selectedItem := m.Lists[m.Focused].SelectedItem()
 	selectedProject := selectedItem.(domain.ProjectItem)
 	selectedProject.Previous()
@@ -192,14 +194,14 @@ func (m *Model) moveToPrevious() /* tea.Msg */ {
 
 }
 
-func (m *Model) next() {
+func (m *Model) nextBoardView() {
 	if m.Focused < domain.High {
 		m.Focused++
 	} else {
 		m.Focused = domain.Low
 	}
 }
-func (m *Model) previous() {
+func (m *Model) previousBoardView() {
 	if m.Focused > domain.Low {
 		m.Focused--
 	} else {

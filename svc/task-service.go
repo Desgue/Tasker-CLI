@@ -6,8 +6,8 @@ import (
 )
 
 type TaskService interface {
-	AddProject(domain.TaskRequest) (domain.TaskItem, error)
-	GetTasks() ([]domain.TaskItem, error)
+	AddTask(domain.TaskRequest) (domain.TaskItem, error)
+	GetTasks(int) ([]domain.TaskItem, error)
 	DeleteTask(int) error
 	UpdateTask(domain.TaskRequest) (domain.TaskItem, error)
 }
@@ -20,7 +20,7 @@ func NewTaskService(repo repo.TaskRepository) TaskService {
 	return &taskService{repo: repo}
 }
 
-func (s *taskService) AddProject(t domain.TaskRequest) (domain.TaskItem, error) {
+func (s *taskService) AddTask(t domain.TaskRequest) (domain.TaskItem, error) {
 	taskRes, err := s.repo.CreateTask(t)
 	if err != nil {
 		return domain.TaskItem{}, err
@@ -29,8 +29,8 @@ func (s *taskService) AddProject(t domain.TaskRequest) (domain.TaskItem, error) 
 	return taskItem, nil
 }
 
-func (s *taskService) GetTasks() ([]domain.TaskItem, error) {
-	res, err := s.repo.GetTasks()
+func (s *taskService) GetTasks(projectId int) ([]domain.TaskItem, error) {
+	res, err := s.repo.GetTasks(projectId)
 	if err != nil {
 		return nil, err
 	}
