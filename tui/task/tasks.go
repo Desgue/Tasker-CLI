@@ -87,6 +87,13 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 			m.initLists(m.width, m.height)
 			return m.Update(nil)
+		// DELETE TASK
+		case "d", "delete":
+			if m.Lists[m.Focused].SelectedItem() != nil {
+				m.deleteTask()
+			}
+			m.initLists(m.width, m.height)
+			return m.Update(nil)
 		}
 	}
 	var cmd tea.Cmd
@@ -164,6 +171,15 @@ func (m *Model) moveStatusBackward() {
 	_, err := m.service.UpdateTask(req)
 	if err != nil {
 		log.Println("error updating task: ", err)
+	}
+}
+
+func (m *Model) deleteTask() {
+	selectedTask := m.Lists[m.Focused].SelectedItem()
+	task := selectedTask.(domain.TaskItem)
+	err := m.service.DeleteTask(task.Id)
+	if err != nil {
+		log.Println("error deleting task: ", err)
 	}
 }
 
