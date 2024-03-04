@@ -2,16 +2,15 @@
 
 A project and taks management tool in your CLI
 
-The Cli is normally the home for many developers and having to change to a browser or other apps may cause distraction and lost of focus, 
-Tasker is a simple Cli TUI designed to help you keep track of your current projects and its associated task without the overhead of managing other apps.
-With keybindings inspired in Vim it has an intuitive feel and because of BubbleTea, a beautiful look.
-If you always get side tracked in your personal projects, Tasker is a good additional tool for your toolkit.
+Many developers thrive in the focused environment of the command line. Switching to browsers or other apps can disrupt their workflow and lead to distractions.
+Tasker is a simple CLI TUI (terminal user interface) application designed specifically for developers. It helps you stay focused on your current projects and their associated tasks by eliminating the distractions and overhead of managing separate apps.
+Inspired by Vim keybindings, Tasker offers an intuitive user experience. Additionally, BubbleTea allows it to maintain a visually appealing interface.
+If you find yourself getting sidetracked while working on personal projects, Tasker can be a valuable addition to your development toolkit.
 
 ## Background
-Tasker actully is a proof of concept developed over the course of a weekend inspired in the BubbleTea guide on how to make Tui apps. 
-Its conception began when I was looking for side projects to work on and develop new skills. 
-I found that I get lost too easly and decided to build something to keep me accounted whenever I decide to start a new project. 
-After finding about BubbleTea and the wonder of convenience of terminal applications I decided to start my learning with Tasker Cli.
+Tasker is actually a proof of concept developed over a weekend, inspired by the BubbleTea guide on creating TUI apps.
+It originated when I was looking for side projects to work on and develop new skills. I realized that I easily get distracted, so I decided to build something that would hold me accountable whenever I start a new project.
+After learning about BubbleTea and the convenience of terminal applications, I decided to start my learning journey with Tasker CLI.
 
 ## Install
 This project use [Go 1.22](https://go.dev/dl/)
