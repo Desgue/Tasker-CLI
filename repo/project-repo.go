@@ -67,7 +67,7 @@ func (r *projectRepository) GetProjects() ([]domain.ProjectRequest, error) {
 
 func (r *projectRepository) DeleteProject(id int) error {
 	log.Println("Deleting project with id:", id)
-	_, err := r.sql.DB.Exec("DELETE FROM Tasks WHERE project_id = ?", id)
+	_, err := r.sql.DB.Exec("DELETE FROM Tasks WHERE projectId = ?", id)
 	if err != nil {
 		return err
 	}

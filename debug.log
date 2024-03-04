@@ -2,3 +2,59 @@ debug 2024/03/03 23:49:52 Hello from service getprojects
 debug 2024/03/03 23:49:52 Hello from repo getprojects
 debug 2024/03/04 01:05:51 Hello from service getprojects
 debug 2024/03/04 01:05:51 Hello from repo getprojects
+debug 2024/03/04 10:11:09 Hello from service getprojects
+debug 2024/03/04 10:11:09 Hello from repo getprojects
+debug 2024/03/04 10:11:15 Hello from service deleteproject
+debug 2024/03/04 10:11:15 Deleting project with id: 4
+debug 2024/03/04 10:11:15 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:11:45 Hello from service getprojects
+debug 2024/03/04 10:11:45 Hello from repo getprojects
+debug 2024/03/04 10:11:51 Hello from service getprojects
+debug 2024/03/04 10:11:51 Hello from repo getprojects
+debug 2024/03/04 10:11:53 Hello from service updateproject
+debug 2024/03/04 10:11:53 Hello from repo updateproject
+debug 2024/03/04 10:11:53 Updating project with id: 4
+debug 2024/03/04 10:11:53 Hello from service getprojects
+debug 2024/03/04 10:11:53 Hello from repo getprojects
+debug 2024/03/04 10:11:55 Hello from service updateproject
+debug 2024/03/04 10:11:55 Hello from repo updateproject
+debug 2024/03/04 10:11:55 Updating project with id: 4
+debug 2024/03/04 10:11:55 Hello from service getprojects
+debug 2024/03/04 10:11:55 Hello from repo getprojects
+debug 2024/03/04 10:12:08 Hello from service getprojects
+debug 2024/03/04 10:12:08 Hello from repo getprojects
+debug 2024/03/04 10:12:11 Hello from service deleteproject
+debug 2024/03/04 10:12:11 Deleting project with id: 4
+debug 2024/03/04 10:12:11 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:12 Hello from service deleteproject
+debug 2024/03/04 10:12:12 Deleting project with id: 4
+debug 2024/03/04 10:12:12 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:12 Hello from service deleteproject
+debug 2024/03/04 10:12:12 Deleting project with id: 4
+debug 2024/03/04 10:12:12 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:13 Hello from service deleteproject
+debug 2024/03/04 10:12:13 Deleting project with id: 4
+debug 2024/03/04 10:12:13 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:27 Hello from service updateproject
+debug 2024/03/04 10:12:27 Hello from repo updateproject
+debug 2024/03/04 10:12:27 Updating project with id: 4
+debug 2024/03/04 10:12:27 Hello from service getprojects
+debug 2024/03/04 10:12:27 Hello from repo getprojects
+debug 2024/03/04 10:12:28 Hello from service deleteproject
+debug 2024/03/04 10:12:28 Deleting project with id: 2
+debug 2024/03/04 10:12:28 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:28 Hello from service deleteproject
+debug 2024/03/04 10:12:28 Deleting project with id: 2
+debug 2024/03/04 10:12:28 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:29 Hello from service deleteproject
+debug 2024/03/04 10:12:29 Deleting project with id: 2
+debug 2024/03/04 10:12:29 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:29 Hello from service deleteproject
+debug 2024/03/04 10:12:29 Deleting project with id: 2
+debug 2024/03/04 10:12:29 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:30 Hello from service deleteproject
+debug 2024/03/04 10:12:30 Deleting project with id: 2
+debug 2024/03/04 10:12:30 SQL logic error: no such column: project_id (1)
+debug 2024/03/04 10:12:30 Hello from service deleteproject
+debug 2024/03/04 10:12:30 Deleting project with id: 2
+debug 2024/03/04 10:12:30 SQL logic error: no such column: project_id (1)
